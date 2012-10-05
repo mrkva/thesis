@@ -1,0 +1,85 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Collins%
+}{%
+Collins%
+}{%
+{\protect \APACyear {2006}}%
+}]{%
+Collins2006}
+\APACinsertmetastar {%
+Collins2006}%
+\begin{APACrefauthors}%
+Collins, N.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2006}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Noises Off: Sound Beyond music}} {{Noises Off: Sound
+  Beyond music}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Leonardo Music Journal}{16}{}{7--8}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kramer%
+\ \protect \BOthers {.}}{%
+Kramer%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {1999}}%
+}]{%
+Fitch}
+\APACinsertmetastar {%
+Fitch}%
+\begin{APACrefauthors}%
+Kramer, G.%
+, Walker, B.%
+, Bonebright, T.%
+, Cook, P.%
+, Flowers, J.%
+, Miner, N.%
+\BCBL {}\ \BBA {} Neuhoff, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1999}{}{}.
+\newblock
+\APACrefbtitle {{The Sonification Report: Status of the Field and Research
+  Agenda}.} {{The Sonification Report: Status of the Field and Research
+  Agenda}.}
+\newblock
+\begin{APACrefURL}
+  [{05/10/12}]\url{http://www.icad.org/websiteV2.0/References/nsf.html}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Pallavi%
+\ \BBA {} Hemlata%
+}{%
+Pallavi%
+\ \BBA {} Hemlata%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+Pallavi2012}
+\APACinsertmetastar {%
+Pallavi2012}%
+\begin{APACrefauthors}%
+Pallavi, A.%
+\BCBT {}\ \BBA {} Hemlata, P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Network Traffic Analysis Using Packet Sniffer}}
+  {{Network Traffic Analysis Using Packet Sniffer}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{International Journal of Engineering Research and
+  Applications}{2}{3}{854--856}.
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}
