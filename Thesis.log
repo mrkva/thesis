@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.9.10)  5 OCT 2012 11:48
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.9.10)  5 OCT 2012 21:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -397,16 +397,15 @@ LaTeX Font Info:    Font shape `T1/fxl/bx/n' in size <14.4> not available
 LaTeX Font Info:    Font shape `T1/fxl/b/n' will be
 (Font)              scaled to size 14.4pt on input line 29.
 LaTeX Font Info:    Font shape `T1/fxl/m/it' will be
-(Font)              scaled to size 10.95pt on input line 32.
+(Font)              scaled to size 10.95pt on input line 34.
 [4
 
-] [5]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 62.
+] [5] [6]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 68.
  (/usr/local/texlive/2012basic/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-[6]
-Overfull \hbox (11.883pt too wide) in paragraph at lines 73--75
+Overfull \hbox (11.883pt too wide) in paragraph at lines 79--81
 []\T1/fxl/m/n/10.95 Tcpdump opens a packet cap-ture at de-vice []wlan0[](wirele
 ss mod-ule). Op-tion []-A[]means
  []
@@ -414,12 +413,12 @@ ss mod-ule). Op-tion []-A[]means
 [7]
 Chapter 3.
 
-Overfull \hbox (22.41055pt too wide) in paragraph at lines 82--82
+Overfull \hbox (22.41055pt too wide) in paragraph at lines 88--88
 []\T1/fxl/b/n/14.4 Reinvention of the phys-i-cal mu-si-cal en-vi-ron-ment 
  []
 
 
-Overfull \hbox (1.41052pt too wide) in paragraph at lines 83--83
+Overfull \hbox (1.41052pt too wide) in paragraph at lines 89--89
 []\T1/fxl/b/n/14.4 Musical use of mi-cro-con-trollers and low-level com-
  []
 
@@ -427,11 +426,7 @@ Overfull \hbox (1.41052pt too wide) in paragraph at lines 83--83
 
 ]
 Chapter 4.
-[9
-
-]
-Chapter 5.
-(./Thesis.bbl [10
+(./Thesis.bbl [9
 
 ]
 Underfull \hbox (badness 3189) in paragraph at lines 37--57
@@ -451,17 +446,17 @@ Underfull \hbox (badness 7777) in paragraph at lines 37--57
 eved 05/10/12, from
  []
 
-) [11
+) [10
 
 ] (./Thesis.aux) ) 
 Here is how much of TeX's memory you used:
  10786 strings out of 494578
  125641 string characters out of 3168574
- 262653 words of memory out of 3000000
+ 260653 words of memory out of 3000000
  13956 multiletter control sequences out of 15000+200000
  103987 words of font info for 63 fonts, out of 3000000 for 9000
  314 hyphenation exceptions out of 8191
- 25i,6n,19p,916b,187s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 25i,6n,19p,1198b,187s stack positions out of 5000i,500n,10000p,200000b,50000s
  </Users/jonas/Library/texlive/2012basic/texmf-var/fonts/pk/l
 jfour/jknappen/ec/ectt1095.600pk>{/usr/local/texlive/2012basic/texmf-dist/fonts
 /enc/dvips/libertine-legacy/xl-8x.enc}{/usr/local/texlive/2012basic/texmf-dist/
@@ -469,10 +464,10 @@ fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2012basic/texmf-dist/fonts/type
 1/public/libertine-legacy/fxlb.pfb></usr/local/texlive/2012basic/texmf-dist/fon
 ts/type1/public/libertine-legacy/fxlr.pfb></usr/local/texlive/2012basic/texmf-d
 ist/fonts/type1/public/libertine-legacy/fxlri.pfb>
-Output written on Thesis.pdf (13 pages, 336069 bytes).
+Output written on Thesis.pdf (12 pages, 336932 bytes).
 PDF statistics:
- 114 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
+ 110 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  9 words of extra memory for PDF output out of 10000 (max. 10000000)
 
