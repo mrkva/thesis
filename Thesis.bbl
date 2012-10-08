@@ -49,10 +49,6 @@ Kramer, G.%
 \APACrefbtitle {{The Sonification Report: Status of the Field and Research
   Agenda}.} {{The Sonification Report: Status of the Field and Research
   Agenda}.}
-\newblock
-\begin{APACrefURL}
-  [{05/10/12}]\url{http://www.icad.org/websiteV2.0/References/nsf.html}
-  \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%

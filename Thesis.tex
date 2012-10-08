@@ -7,7 +7,7 @@
 \usepackage[parfill]{parskip}
 \begin{document}
 
-\title{Sonification, electronic physical instruments, aesthetic experiments and their role in my work}
+\title{Sonification, electronic physical instruments and their role in my work}
 \author{Jonáš Gruska\\
 				Bachelor's Thesis\\
 				Institute of Sonology}
@@ -28,19 +28,31 @@
 
 \section{Thoughts on current state of sonification}
 % What is this chapter gonna be about
-To me, topic of sonification is intriguing for few reasons. First of them could be, that it is a topic benefiting from interest from various groups of scientists and creatives - from biologists, through mathematicians, to musicians and sound artists. Another is a belief, that this topic still has a lot of cloaked potential. I will try to discuss this clash between scientific and artistic approach, various significant projects or artworks, as well as fields of opportunity raising from this duality.
+Topic of sonification is intriguing for few reasons. First of them could be, that it is a topic benefiting from interest from various groups of people, scientists - from biologists, through mathematicians, creatives - from musicians and sound artists and general public. Another is a belief, that this topic still has a lot of cloaked potential. I will try to discuss this clash between scientific and artistic approach, various significant projects or artworks, as well as fields of opportunity raising from this duality.
 
 % Sonification definition
-Main understanding of the term \textit{sonification} is the `use of non-speech audio to convey information', or more precisely, it is the `transformation of data relations into perceived relations in an acoustic signal for the purposes of facilitating communication or interpretation' \cite{Fitch}. That is a definition made by ICAD (International Community for Auditory Display), which is one of the main organizations in this field. Nicolas Collins puts it less formally, as a method for one to provide `aural alternatives to pie charts, line graphs and spreadsheets' \cite{Collins2006}. All these quotations define it as an analytical, representative point of view, and the reasoning behind the use of sonification in this sense is repositioning of the information from traditional semantic, visual or mathematical level to sonic level giving ground to non-traditional data analysis via medium of sound or music. Interestingly ICAD first definition mentioning conveying \textit{information} rather than data can also give an understanding that sonification is not only about data patterns and whether we try to sonify weather forecast or our emotions is secondary.
+Main understanding of the term \textit{sonification} is the `use of non-speech audio to convey information', or more precisely, it is the `transformation of data relations into perceived relations in an acoustic signal for the purposes of facilitating communication or interpretation' \cite{Fitch}. That is a definition made by ICAD (International Community for Auditory Display), which is one of the main research organizations in the field organizing annual International Conference for Auditory Display. Nicolas Collins puts it less formally, as a method for one to provide `aural alternatives to pie charts, line graphs and spreadsheets' \cite{Collins2006}. All these quotations define it as an analytical, representative point of view, and the reasoning behind the use of sonification in this sense is repositioning of the information from e.g. traditional semantic, visual or statistic level to sonic level giving ground to non-traditional data analysis via medium of sound or music. Interestingly, ICADs first definition mentioning conveying \textit{information} rather than data can also give an understanding that sonification is not only about data patterns; and whether we try to sonify weather forecast or our emotions is secondary.
 
 % Division proposal
-I would like to propose a division in this definition. There is one part of sonification world, which is described above; that is an analytical, `auditory display' stand. My proposition adds \textit{an artistic stand}, where the main goal of the process is not to make certain data accessible for aural analysis, but rather to use those data as a essence of specific aesthetics. That means, one is no more looking for an scientific tool, but on sonic instrument, source of inspiration and compositional data. Reaching exact, understandable representation of data becomes additional rather than essential.
+I would like to propose a division in this definition. There is one part of sonification world, which is described above; that is an analytical, `auditory display' stand. My proposition adds \textit{an artistic stand}, where the main goal of the process is not to make certain data accessible for aural analysis, but rather to use those data as a essence of specific aesthetics. That means, one is no more looking for an scientific tool, but on a sonic instrument, source of inspiration and compositional data. It might as well be described as a matter of aim behind the use of sonification methods in his work: whether works are aimed to inform a listener or provide him and auditory display of some data, or sonification is used for its characteristic aesthetics.
 
-These modes can overlap, but usually the distinction is clear. and analytical mode prevails in quantity.
+Use of streams of data for compositional and sound generating purposes is very familiar to electro-acoustic composers, artists and performers. Sonification in artistic stand is pushing the idea a little further - instead of algorithms, `real world' data are used, although reaching their exact, understandable representation becomes additional or even insignificant rather than essential.
+
+Next, I would like to point out few significant works which use sonification as its main concept or method, and while doing so, I will try to exercise my proposal for the new sonification definition division.
+
+One of the most classic examples of sonification is Geiger counter. Geiger counter is clearly an \textit{analytic} sonification tool, with its main purpose being representation of certain information, rather than using the information as an artistic basis.
+
+Probably closest to my work is the one by Michael Chinen. Michael Chinen is an Dartmouth College graduate, sound artist and one of the developers of popular open source audio editing software Audacity.
+% His work is representative and direct, yet its main point its not to convey information. Auditory display becomes `useless' from scientific or research point of view and becoomes interesting as an artwork for its specific aesthetics.
+
+%Sonification of objects using distance sensors.
+
 
 \section{Wireless network sonification}
 
-As a part of my experimentation with untraditional sources for musical or generally sonic data I decided to extend my line of work on the layer of wireless networks. First I would like to define some basic terms of the technical side of the issue and then continue by describing my point of view on even more important social and artistic side. 
+As a part of my experimentation with untraditional sources for musical or generally sonic data I decided to extend my line of work on the layer of wireless networks. Project I would like to describe in this chapter is dealing with wireless network sonification as a main artistic source for sonic performance and installation. In basic terms, it catches data `from the air' (wireless routers) and transforms them directly into sound using set of tools and methods. This work has been presented as a performance and as an installation. In case of performance, I have used \textit{live coding} technique to change the aspects of the sonification and I performed interaction with the data stream itself by generating artificial traffic on the network.
+
+To go into more detail, first I would like to define some basic terms of the technical side of the project and then continue by describing my point of view on even more important social and artistic side.
 
 % Describe the whole concept in general first
 % As musician using a metal box for performance
@@ -81,6 +93,8 @@ Tcpdump opens a packet capture at device \"wlan0\" (wireless module). Option \"-
 This already gives us some amount of sonification of the network with just single line of code. 
 
 %Next step was to thing about what other ways are there to experiment with. One of the options what would be to change the sample rate of the \"/dev/dsp\" (sound card) on-the-fly and thus change the resulting sound as with Sonodump. After some research on the topic it seemed rather complicated and bulky to do, so I had to think of some other method. That was when I discovered \"aplay\", part of ALSA sound system. ALSA is amongst OSS and Jack one of possible sound systems used for audio on Linux. The two most important functions of aplay for me was the possibility to read data from pipeline and to modify couple of the parameters of the reading. Great addition was that there could be unlimited amount of aplays playing at the same time, even from one source.
+
+From the artistic standpoint...
 
 
 \section{City attributes sonification}
