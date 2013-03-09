@@ -1,0 +1,21 @@
+\contentsline {chapter}{Contents}{2}
+\contentsline {chapter}{\chapternumberline {1}Sonification and audification experiments}{4}
+\contentsline {section}{\numberline {1.1}Thoughts on current state of sonification}{4}
+\contentsline {section}{\numberline {1.2}Wireless network sonification}{7}
+\contentsline {subsection}{Work process and technical details}{7}
+\contentsline {section}{\numberline {1.3}City attributes sonification}{11}
+\contentsline {chapter}{\chapternumberline {2}Other works}{12}
+\contentsline {section}{\numberline {2.1}Binmatu}{12}
+\contentsline {subsection}{Introduction}{12}
+\contentsline {subsection}{Starting point}{13}
+\contentsline {subsection}{Binmatu}{14}
+\contentsline {subsection}{Selected performances and installations}{16}
+\contentsline {subsection}{Conclusion}{17}
+\contentsline {section}{\numberline {2.2}Phasolume}{18}
+\contentsline {subsection}{Introduction}{18}
+\contentsline {subsection}{Working process}{19}
+\contentsline {subsection}{Concept and execution}{20}
+\contentsline {subsection}{Exhibition}{20}
+\contentsline {subsection}{Conclusion}{21}
+\contentsline {chapter}{\chapternumberline {3}Conclusion}{22}
+\contentsline {section}{References}{22}

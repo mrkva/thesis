@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.9.10)  8 OCT 2012 16:48
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.9.10)  9 MAR 2013 19:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -316,25 +316,25 @@ Package: parskip 2001/04/09 non-zero parskip adjustments
 (./Thesis.aux)
 \openout1 = `Thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Try loading font information for T1+fxl on input line 8.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Try loading font information for T1+fxl on input line 7.
 
 (/usr/local/texlive/2012basic/texmf-dist/tex/latex/libertine-legacy/t1fxl.fd
 File: t1fxl.fd 2011/06/06 scaled font definitions for libertine T1/fxl (Nm).
 )
 LaTeX Font Info:    Font shape `T1/fxl/m/n' will be
-(Font)              scaled to size 10.95pt on input line 8.
+(Font)              scaled to size 10.95pt on input line 7.
 \c@maskedRefs=\count94
 
 (/usr/local/texlive/2012basic/texmf-dist/tex/latex/apacite/english.apc
@@ -343,30 +343,30 @@ LaTeX Info: Redefining \BPBI on input line 129.
 LaTeX Info: Redefining \BHBI on input line 130.
 )
 LaTeX Font Info:    Font shape `T1/fxl/m/n' will be
-(Font)              scaled to size 17.28pt on input line 16.
+(Font)              scaled to size 17.28pt on input line 15.
 LaTeX Font Info:    Font shape `T1/fxl/m/n' will be
-(Font)              scaled to size 12.0pt on input line 16.
+(Font)              scaled to size 12.0pt on input line 15.
 <<ot1.cmap>>
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 16.
+(Font)              <12> on input line 15.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 16.
+(Font)              <8> on input line 15.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 16.
+(Font)              <6> on input line 15.
  [1
 
 {/usr/local/texlive/2012basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/fxl/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/fxl/b/n' tried instead on input line 18.
+(Font)              Font shape `T1/fxl/b/n' tried instead on input line 16.
 LaTeX Font Info:    Font shape `T1/fxl/b/n' will be
-(Font)              scaled to size 10.95pt on input line 18.
+(Font)              scaled to size 10.95pt on input line 16.
  [1]
 LaTeX Font Info:    Font shape `T1/fxl/m/n' will be
-(Font)              scaled to size 24.88pt on input line 21.
+(Font)              scaled to size 24.88pt on input line 19.
 LaTeX Font Info:    Font shape `T1/fxl/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/fxl/b/n' tried instead on input line 21.
+(Font)              Font shape `T1/fxl/b/n' tried instead on input line 19.
 LaTeX Font Info:    Font shape `T1/fxl/b/n' will be
-(Font)              scaled to size 24.88pt on input line 21.
+(Font)              scaled to size 24.88pt on input line 19.
  [1
 
 ] (./Thesis.toc
@@ -381,65 +381,71 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 ]
 Chapter 1.
 LaTeX Font Info:    Font shape `T1/fxl/m/n' will be
-(Font)              scaled to size 20.74pt on input line 25.
+(Font)              scaled to size 20.74pt on input line 23.
 LaTeX Font Info:    Font shape `T1/fxl/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/fxl/b/n' tried instead on input line 25.
+(Font)              Font shape `T1/fxl/b/n' tried instead on input line 23.
 LaTeX Font Info:    Font shape `T1/fxl/b/n' will be
-(Font)              scaled to size 20.74pt on input line 25.
+(Font)              scaled to size 20.74pt on input line 23.
 [3
 
 ]
 Chapter 2.
 LaTeX Font Info:    Font shape `T1/fxl/m/n' will be
-(Font)              scaled to size 14.4pt on input line 29.
+(Font)              scaled to size 14.4pt on input line 27.
 LaTeX Font Info:    Font shape `T1/fxl/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/fxl/b/n' tried instead on input line 29.
+(Font)              Font shape `T1/fxl/b/n' tried instead on input line 27.
 LaTeX Font Info:    Font shape `T1/fxl/b/n' will be
-(Font)              scaled to size 14.4pt on input line 29.
+(Font)              scaled to size 14.4pt on input line 27.
 LaTeX Font Info:    Font shape `T1/fxl/m/it' will be
-(Font)              scaled to size 10.95pt on input line 34.
+(Font)              scaled to size 10.95pt on input line 33.
 [4
 
-] [5] [6]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 79.
- (/usr/local/texlive/2012basic/texmf-dist/tex/latex/base/t1cmtt.fd
+]
+Underfull \hbox (badness 10000) in paragraph at lines 45--51
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
+
+ []
+
+[5] [6]
+LaTeX Font Info:    Font shape `T1/fxl/bx/n' in size <12> not available
+(Font)              Font shape `T1/fxl/b/n' tried instead on input line 87.
+LaTeX Font Info:    Font shape `T1/fxl/b/n' will be
+(Font)              scaled to size 12.0pt on input line 87.
+ [7] [8]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 112.
+
+
+(/usr/local/texlive/2012basic/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-[7]
-Overfull \hbox (11.883pt too wide) in paragraph at lines 90--92
+Overfull \hbox (11.883pt too wide) in paragraph at lines 122--123
 []\T1/fxl/m/n/10.95 Tcpdump opens a packet cap-ture at de-vice []wlan0[](wirele
 ss mod-ule). Op-tion []-A[]means
  []
 
-[8]
+[9]
 Chapter 3.
+[10
 
-Overfull \hbox (22.41055pt too wide) in paragraph at lines 101--101
-[]\T1/fxl/b/n/14.4 Reinvention of the phys-i-cal mu-si-cal en-vi-ron-ment 
- []
-
-
-Overfull \hbox (1.41052pt too wide) in paragraph at lines 102--102
-[]\T1/fxl/b/n/14.4 Musical use of mi-cro-con-trollers and low-level com-
- []
-
-[9
-
-]
+] [11] [12] [13] [14] [15] [16] [17]
 Chapter 4.
-(./Thesis.bbl [10
+(./Thesis.bbl [18
 
-]) [11
+]) [19
 
 ] (./Thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 10786 strings out of 494578
- 125641 string characters out of 3168574
- 262653 words of memory out of 3000000
- 13956 multiletter control sequences out of 15000+200000
- 103987 words of font info for 63 fonts, out of 3000000 for 9000
+ 10805 strings out of 494578
+ 125916 string characters out of 3168574
+ 261992 words of memory out of 3000000
+ 13971 multiletter control sequences out of 15000+200000
+ 112874 words of font info for 67 fonts, out of 3000000 for 9000
  314 hyphenation exceptions out of 8191
- 25i,6n,19p,1275b,187s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 25i,6n,19p,1366b,187s stack positions out of 5000i,500n,10000p,200000b,50000s
  </Users/jonas/Library/texlive/2012basic/texmf-var/fonts/pk/l
 jfour/jknappen/ec/ectt1095.600pk>{/usr/local/texlive/2012basic/texmf-dist/fonts
 /enc/dvips/libertine-legacy/xl-8x.enc}{/usr/local/texlive/2012basic/texmf-dist/
@@ -447,10 +453,10 @@ fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2012basic/texmf-dist/fonts/type
 1/public/libertine-legacy/fxlb.pfb></usr/local/texlive/2012basic/texmf-dist/fon
 ts/type1/public/libertine-legacy/fxlr.pfb></usr/local/texlive/2012basic/texmf-d
 ist/fonts/type1/public/libertine-legacy/fxlri.pfb>
-Output written on Thesis.pdf (13 pages, 333104 bytes).
+Output written on Thesis.pdf (21 pages, 368998 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
+ 129 PDF objects out of 1000 (max. 8388607)
+ 69 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  9 words of extra memory for PDF output out of 10000 (max. 10000000)
 

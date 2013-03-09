@@ -1,6 +1,6 @@
 This is BibTeX, Version 0.99d (TeX Live 2012)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: Thesis.aux
+The top-level auxiliary file: Thesis copy.aux
 The style file: apacite.bst
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
@@ -14,7 +14,7 @@ Database file #1: general.bib
 apacite.bst [2012/02/25 v6.01 APA bibliography style]
 You've used 6 entries,
             6735 wiz_defined-function locations,
-            1271 strings with 11279 characters,
+            1271 strings with 11289 characters,
 and the built_in function-call counts, 10981 in all, are:
 = -- 1337
 > -- 98
