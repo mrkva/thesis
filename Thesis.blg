@@ -11,45 +11,48 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Database file #1: general.bib
+Warning--entry type for "Chinen" isn't style-file defined
+--line 160 of file general.bib
 apacite.bst [2012/02/25 v6.01 APA bibliography style]
-You've used 6 entries,
+You've used 8 entries,
             6735 wiz_defined-function locations,
-            1271 strings with 11279 characters,
-and the built_in function-call counts, 10981 in all, are:
-= -- 1337
-> -- 98
-< -- 518
-+ -- 523
-- -- 12
-* -- 705
-:= -- 2064
-add.period$ -- 24
-call.type$ -- 6
-change.case$ -- 102
+            1282 strings with 11496 characters,
+and the built_in function-call counts, 13896 in all, are:
+= -- 1757
+> -- 108
+< -- 615
++ -- 619
+- -- 14
+* -- 854
+:= -- 2491
+add.period$ -- 32
+call.type$ -- 8
+change.case$ -- 122
 chr.to.int$ -- 0
-cite$ -- 12
-duplicate$ -- 282
-empty$ -- 443
-format.name$ -- 176
-if$ -- 2072
+cite$ -- 16
+duplicate$ -- 338
+empty$ -- 593
+format.name$ -- 190
+if$ -- 2706
 int.to.chr$ -- 0
-int.to.str$ -- 12
+int.to.str$ -- 16
 missing$ -- 0
-newline$ -- 150
-num.names$ -- 48
-pop$ -- 220
+newline$ -- 187
+num.names$ -- 56
+pop$ -- 312
 preamble$ -- 1
-purify$ -- 24
+purify$ -- 30
 quote$ -- 0
-skip$ -- 677
+skip$ -- 915
 stack$ -- 0
-substring$ -- 570
-swap$ -- 166
-text.length$ -- 12
+substring$ -- 677
+swap$ -- 192
+text.length$ -- 15
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 480
+type$ -- 736
 warning$ -- 0
-while$ -- 57
+while$ -- 63
 width$ -- 0
-write$ -- 189
+write$ -- 232
+(There was 1 warning)

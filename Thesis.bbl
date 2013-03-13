@@ -48,6 +48,29 @@ Hermann, T.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Knoll%
+}{%
+Knoll%
+}{%
+{\protect \APACyear {2000}}%
+}]{%
+Knoll2000}
+\APACinsertmetastar {%
+Knoll2000}%
+\begin{APACrefauthors}%
+Knoll, G\BPBI F.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2000}{}{}.
+\newblock
+\APACrefbtitle {{Radiation Detection and Measurement, Third edition}.}
+  {{Radiation Detection and Measurement, Third edition}.}
+\newblock
+\APACaddressPublisher{}{John Wiley and sons}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Kramer%
 \ \protect \BOthers {.}}{%
 Kramer%
@@ -73,6 +96,24 @@ Kramer, G.%
 \APACrefbtitle {{The Sonification Report: Status of the Field and Research
   Agenda}.} {{The Sonification Report: Status of the Field and Research
   Agenda}.}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+\APACcitebtitle {Listen to your computer: lstn}}{%
+\APACcitebtitle {Listen to your computer: lstn}}{%
+{\protect \APACyear {{\protect \bibnodate {}}}}%
+}]{%
+Chinen}
+\APACinsertmetastar {%
+Chinen}%
+\APACrefbtitle {Listen to your computer: lstn.} {Listen to your computer:
+  lstn.}
+\newblock
+\APACrefYearMonthDay{{\protect \bibnodate {}}}{}{}.
+\newblock
+\begin{APACrefURL} [{March 9,
+  2013}]\url{http://michaelchinen.com/2010/12/09/listen-to-your-computer-lstn/}
+  \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -122,14 +163,14 @@ Vickers, P.%
 \newblock
 \APACrefYearMonthDay{2006}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {{SONIFICATION ABSTRAITE / SONIFICATION CONCR ETE : AN
-  ‘ \AE STHETIC PERSPECTIVE SPACE ’ FOR CLASSIFYING AUDITORY DISPLAYS IN
-  THE ARS MUSICA DOMAIN}} {{SONIFICATION ABSTRAITE / SONIFICATION CONCR ETE :
-  AN ‘ \AE STHETIC PERSPECTIVE SPACE ’ FOR CLASSIFYING AUDITORY DISPLAYS IN
-  THE ARS MUSICA DOMAIN}}.{\BBCQ}
+{\BBOQ}\APACrefatitle {{Sonification Abstraite / Sonification Concrete : an ‘
+  \AE sthetic Perspective Space ’ for classifying Auditory Displays in the
+  Ars Musica Domain}} {{Sonification Abstraite / Sonification Concrete : an ‘
+  \AE sthetic Perspective Space ’ for classifying Auditory Displays in the
+  Ars Musica Domain}}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{International Conference on Auditory Display (
-  \ldots}{}{}{210--216}.
+\APACjournalVolNumPages{International Conference on Auditory
+  Display}{}{}{210--216}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
