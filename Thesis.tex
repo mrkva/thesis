@@ -1,4 +1,5 @@
 \documentclass[12pt,a4paper,oneside]{report} 
+%\documentclass[a5paper,oneside]{memoir}
 \usepackage[utf8]{inputenc} 
 \usepackage{apacite} 
 \usepackage{cmap} 
@@ -8,7 +9,8 @@
 \usepackage[scaled=0.80]{beramono}
 %\PassOptionsToPackage{scaled=0.75}{beramono}
 \usepackage[parfill]{parskip} 
-%\usepackage{hyperref}
+
+\usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{setspace}
@@ -44,7 +46,7 @@ Institute of Sonology}
 
 
 \chapter*{Acknowledgements}
-I would like to thank my parents for supporting me during my studies. I would never be able to learn what I love without them. And of course, I would like to thank my mentor Paul Berg for his patience with my chaotic behavior and the whole Institute of Sonology for helping me to become who I want to be. Last, I would like to thank Marko Uzunovski, Xavier de Wannemaeker, Maya Verlaak, Daniel Tóth, Peter Sych, Marek Chołoniewski and all my other friends in supporting me in my work, inspiring and pushing me forward.
+I would like to thank my parents for supporting me during my studies. I would never be able to learn what I love without them. And of course, I would like to thank my mentor Paul Berg for his patience with my chaotic behavior and the whole Institute of Sonology for helping me to become who I want to be. Last, I would like to thank Marko Uzunovski, Xavier De Wannemaeker, Maya Verlaak, Daniel Tóth, Peter Sych, Marek Chołoniewski and all my other friends in supporting me in my work, inspiring and pushing me forward.
 
 \setcounter{tocdepth}{1}
 \tableofcontents
@@ -140,7 +142,7 @@ Detektors is \emph{``an open, collaborative project which uses sonic strategies 
 	\label{fig:detektor}
 \end{figure}
 
-For ``detection'', specially designed device is used as seen on figure ~\ref{fig:detektor}. Core of the hardware is handy logarithmic detector chip AD8313 produced by Analog Devices. This chip takes AC signals from up to 2.5 GHz  (upper border most used wireless network range is 2.4 Ghz \cite{802}) and demodulates it into audible sphere. This is somehow similar to work of Kubisch, but there is a difference in the frequency spectrum target. Method using induction coils provides us only with electromagnetic AC signal within our hearing range and within the limitations of the amplifying system, but method using demodulator allows us to listen to e.g.\ bluetooth and wireless radio communication. Interestingly, Detektors and Kubisch's work both share emphasis on placing of their sonic discoveries within cartographic space.
+For ``detection'', specially designed device is used as seen on figure ~\ref{fig:detektor}. Core of the hardware is handy logarithmic detector chip AD8313 produced by Analog Devices. This chip takes AC signals from up to 2.5 GHz  (upper border most used wireless network range is 2.4 Ghz \cite{802} and demodulates it into audible sphere. This is somehow similar to work of Kubisch, but there is a difference in the frequency spectrum target. Method using induction coils provides us only with electromagnetic AC signal within our hearing range and within the limitations of the amplifying system, but method using demodulator allows us to listen to e.g.\ bluetooth and wireless radio communication. Interestingly, Detektors and Kubisch's work both share emphasis on placing of their sonic discoveries within cartographic space.
 
 %Sonification of objects using distance sensors.
 Another case to study and analyze might be a project of Gil Weinberg called \emph{BrainWaves}. It is based on interactive auditory research of electrical stimuli applied to \emph{in vitro} neuron cultures. I picked the project for the collision of scientific and artistic approach in the work.
@@ -244,6 +246,8 @@ Organizers have happily accepted my proposal for the exact topic, being sonifica
 
 Workshop resulted in few interesting ideas. One of the most inspiring one was the one of Lucie Vítková. Lucie actually studied at Royal Conservatory for a year after the workshop. Her idea was to do direct live interpretation of the street.  In the beginning, we have split the street into sections and each of us was responsible for sonification of his part. Each of us had different instrument and different set of rules. Sonification worked via visual clues, which we (as musicians) interpreted into sounds / music. Visual clues could have been anything happening on the street - trams, walkers or wind. One of us decided to sonify a person walking on the street by simulating the rhythm of his footsteps on a small home-build synthesizer.
 
+Another project, by Václav Peloušek, was based on my research of wireless sonification. He has harvested (or ``sniffed'') portions of data from surroundings of our workshop space and sonified them in rather unusual way. He has used online services which allow one to read out given text and he fed them the raw wireless data, containing plenty of humanly unreadable data. He used service which offers ``czech'' voice, allowing to have amusing pronunciation of these noisy characters in a sequence. Last project to mention was one of Peter Gonda, which used open source software \textbf{driftnet} to work on a visual level. Driftnet allows one to sniff wireless network and directly parse images in the streams. This means, that whenever is one opening a certain image on a network, we were able to see the image directly on the screen.
+
 I have as well realized a project I had in mind for some time, that being timetable sonification. Timetables are quite accurate in reflecting certain rhythms of city. They are carefully adjusted for the needs of citizens to allow smooth and on-time distribution, especially in peak hours. This results in various frequencies of arrivals of transport, depending on the time of the day. For this purposes, I have constructed a patch called ``Šalina samohrajka'' (šalina means tram in slang of Brno). Than I harvested few different timetables of trams in Brno and fed them to the patch to create a score (see fig. ~\ref{fig:salina}).
 
 \begin{figure}  
@@ -257,7 +261,13 @@ Each of the scores (tram lines) was binary grid. This means, it had 1440 fields 
 
 Whole project was rather interesting experience, unfortunately I was not able to motivate everyone to do solid work. Few people had natural fear of computers and did not really understood the concepts, which was of course problematic. But for the ideas such as the one of Lucie, I know it was worth doing.
 
-// LINK na video
+\begin{figure}  
+  \centering
+    \includegraphics[width=0.9\textwidth]{img/workshop}
+	\caption{Street sonification project in front of House of Arts in Brno}
+	\label{fig:workshop}
+\end{figure}
+
 %\chapter{Modularity and physical instruments}
 %\section{Reinvention of the physical musical environment}
 %\section{Musical use of microcontrollers and low-level computers}
@@ -375,7 +385,7 @@ Visually, the installation was very minimalistic - bare metallic plates emitting
 
 \subsection{Performances}
 
-I have performed with the installation 5 times, for various groups of people. First performances were happening during Hoogtij event, which turned out to be unfortunate. The crowds and delicate sound installations simply do not come together as a good match and I had ask people to be quite many times to make my work audible. Luckily the last three performances after unsuccessful two went quite successfully, one even having a very positive review at local art blog\footnote{http://jegensentevens.nl/2013/03/de-frequentie-van-materiaal/}.
+I have performed with the installation 5 times, for various groups of people. First performances were happening during Hoogtij event, which turned out to be unfortunate. The crowds and delicate sound installations simply do not come together as a good match and I had ask people to be quite many times to make my work audible. Luckily the last three performances after unsuccessful two went quite successfully, one even having a very positive review at local art blog\footnote{\url{http://jegensentevens.nl/2013/03/de-frequentie-van-materiaal/}}.
 
 \begin{figure}  
   \centering
@@ -390,6 +400,10 @@ I have actually quite enjoyed the concept of creating installation as a system f
 
 
 \chapter{Conclusion}
+
+\appendix
+\include{include/performances}
+\onehalfspacing
 
 \bibliographystyle{apacite} 
 \bibliography{general}
