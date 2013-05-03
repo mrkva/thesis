@@ -24,3 +24,4 @@
 *.txt
 .DS_Store
 materialy
+*.fdb_latexmk
