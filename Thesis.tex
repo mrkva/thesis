@@ -1,7 +1,8 @@
 \documentclass[12pt,a4paper,oneside]{report} 
+
 %\documentclass[14pt,a5paper,oneside]{memoir}
 %\setlrmarginsandblock{1cm}{1cm}{*}
-%\setulmarginsandblock{1cm}{1cm}{*}
+%\setulmarginsandblock{2cm}{2cm}{*}
 %\checkandfixthelayout
 
 \usepackage[utf8]{inputenc} 
@@ -19,6 +20,9 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{setspace}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,fit,backgrounds}
 \onehalfspacing
 
 %\usepackage[style=apa,backend=biber]{biblatex}
@@ -206,25 +210,62 @@ Command \texttt{cat} reads the file \texttt{SONIFY\_ME.txt} --- which is a regul
 %In my definition, a sound or piece of music can be called composition even though it is not composed by a composer.
 This is very primitive and direct method of sonifiying any data and sometimes results in quite surprising compositions. It is not an easy task to determine whether this primitive mode of sonification can be called composing and who actually is a composer in the system. Is it me, the person which conceptually combines data stream and their sonic interpretation or is it the program which actually decides on the translation of the data to sounds? I believe that the result of sonification of a non-audio data file can be seen as a composition, but I am not completely sure who is the composer in that situation. I am generally inclined to the idea, that the program, data file and my concept are composing in \emph{symbiosis} of the Machine, Data and the Human.
 
-I was particularly charmed by the sound of archive containing source codes of tcpdump itself. The song (or a file --- in this sense it is almost synonymous) offers range of gestures which are composed in surprisingly pleasing way. There are even few rhythmic patterns appearing now and than.
+I was particularly charmed by the sound of archive containing source codes of tcpdump itself. The song (or a file --- in this sense it is almost synonymous) offers range of gestures which are composed in a unexpectedly pleasing way. There are even appearances of few rhythmic patterns and primitive melodies. To give you a clear image, I have linked a recording of this composition in \autoref{appendix:a}.
 
 Basic process of reading network data and converting them directly to sound is not much harder. The \texttt{cat} command is now replace with \texttt(tcpdump), which is a tool mentioned before --- traffic analyzer, \emph{sniffer}.
 \begin{quotation}
 	\texttt{tcpdump -i wlan0 -A > /dev/dsp} 
 \end{quotation}
 
-Tcpdump opens a packet capture at device \texttt{wlan0} (wireless module). Option \texttt{-A} represents conversion of the characters to ASCII symbols (so we can always read them in terminal). This already gives us some amount of sonification of the network with just single line of code. 
+Tcpdump opens a packet capture process at a device \texttt{wlan0} (wireless module). Option \texttt{-A} represents conversion of the captured data to ASCII symbols, allowing us to always read them in the terminal as text. These are than again, streamed into \texttt{/dev/dsp} which serves as the sonifying module. This already gives us some amount of sonification of the network with just single line of code. 
 
-Next step was to think about what other ways are there to experiment with. One of the options was change of the sample rate of the /dev/dsp (sound card) on-the-fly and thus change the resulting sound as with Sonodump. After some research on the topic it seemed rather complicated and bulky to do, so I had to think of some other method. That was when I discovered \textbf{aplay}, part of ALSA. ALSA is amongst OSS and Jack one of sound systems used for audio on Linux. The two most important functions of aplay for me were the possibility to read data from pipeline and to modify couple of the parameters of the reading. Great addition was that there is a way to have almost unlimited amount of aplays playing at the same time, even from one source, ALSA is handling the mixing of the streams to DAC.
+Next step was, to think about what other ways are there to experiment with. One of the options was change of the sample rate of the /dev/dsp (sound card) on-the-fly and thus change of the resulting sound as with the Sonodump. After some research on the topic it seemed as rather complicated and bulky approach, so I had to think of some other method. That was when I discovered \textbf{aplay}, part of ALSA. ALSA is amongst OSS and Jack one of sound systems used for audio on Linux. The most important function of aplay for me was the possibility to read data from pipeline (i.e.\ from other process) and to modify few parameters of the reading. Great addition was fact, that it is easy to have almost unlimited amount of aplays playing at the same time, even from one source. ALSA is handling the mixing of the streams to the sound card.
 
-Interaction (or as some people call it --- tampering) with data stream was, as I mentioned earlier, not easy decision. There was part of me trying to preserve the original streams in their pure form, but in the end, I have decided to work with streams as with live instrument. Of course, the control is not so direct as hitting the drum. My stick is hidden in the terminal. 
+Interaction (or as some people call it --- tampering) with data stream was, as I mentioned earlier, not an easy decision. There was part of me trying to preserve the original streams in their pure form, but in the end, I have decided to work with streams as with a live instrument. Of course, the control is not as direct as hitting the drum. My \emph{stick}, which I use to hit the system, is hidden in the terminal.
 
-Technically, I was mainly generating arbitrary traffic using set of tools created by hackers (penetration testers in everyday job) dedicated to stress testing of networks. Creating artificial loads is useful for few reasons, one being recording a reaction of routers to such massive amounts of data and the other one (a bit more evil one) --- when router crashes because of overload, all users on the network must reconnect. And reconnecting means resending passwords as well, so it creates ideal situation for sniffing of the sensitive data --- all at once!
+\begin{figure}  
+  \centering
+    \tikzstyle{block} = [rectangle, draw, 
+	    text width=6em, text centered, minimum height=2.5em, node distance=4.5cm, scale=0.8]
+	\tikzstyle{line} = [draw, -triangle 90, scale=1.2]
+
+
+	\begin{tikzpicture}[node distance = 2cm, auto]
+	    % Place nodes
+	    \node [block] (nds) {\texttt{Network data stream}};
+		\node [block, above of=nds, node distance=3cm] (rni) {\texttt{Router, other network users}};
+	    \node [block, right of=nds] (sniffer) {\texttt{\textbf{tcpdump} \\Packet sniffer}};
+		\node [block, right of=sniffer] (aplay) {\texttt{\textbf{aplay} \\ Actual sonification}};
+		\node [block, below of=sniffer] (me) {\texttt{Me (Performer)}};
+		\node [block, right of=aplay] (aout) {\texttt{Audio output}};
+
+	    % Draw edges
+	    \path [line] (rni) -- (nds);
+		\path [line] (nds) -- (sniffer);
+		\path [line] (sniffer) -- (aplay);
+		\path [line] (aplay) -- (aout);
+		\path [line, rounded corners=5pt] (me) -| node [near end, above, scale=.8, rotate=90] {\texttt{Arbitrary data}} (nds);
+		\path [line, rounded corners=5pt] (me) -| node [near end, below, scale=.8, rotate=90] {\texttt{\begin{tabular}{l}
+		Sonification\\ parameters 
+		\end{tabular}}} (aplay);
+
+		\begin{scope}[on background layer]
+		    \node[fill=lightgray!50,inner sep = 4mm,fit=(aplay)(sniffer),label=above:\texttt{Computer}] {}; 
+		\end{scope}
+	
+		\end{tikzpicture}
+	\caption{Data flow of wireless network sonification}
+	\label{fig:wifisonifi}
+\end{figure}
+
+From technical view, I was mainly generating arbitrary traffic using set of tools created by hackers (penetration testers in everyday job) dedicated to stress testing of networks. Creating such artificial loads is useful for few reasons: one being recording a reaction of routers to such massive amounts of data and the other one (a bit more evil one) is a bit more complex. When router crashes because of an overload, all users on the network must reconnect. And reconnecting means resending passwords as well, so it creates ideal situation for sniffing of the sensitive data --- from all users at almost the same time!
+
+At this point I have had prepared a sufficient toolkit for my upcoming performance and installation, therefore I started to focus on the artistic aspects, nuances of the work.
 
 \subsection{Performance}
-I have performed only once in this setup. As mentioned, it was on AudioArt festival in Kraków and it has been successful, for few reasons. My initial approach was to try to create some kind of static object in space, which would than perform `for me'. I would be sitting away from the device with laptop in my lap and I would control the process from there, over network. This has been the idea until around 4 days before the performance, when after talking with my friend I have decided to do a live welding during the performance.
+I have performed only once with this setup. As mentioned, it was on AudioArt festival in Kraków and it has been successful, for few various reasons. My initial approach was to try to create some kind of static object in space, which would than perform \emph{for me}, as in --- instead of me. I would be sitting away from the device with laptop in my lap and I would control the process from there, over network. This has been the idea until around 4 days before the performance, when after talking with my friend I have decided to twist my plan in quite radical fashion and do a live welding of my instalation during the performance.
 
-To elaborate a bit more, I have always been intrigued by welding and atmosphere it creates. Soundworld of welding machine was actually quite matching to soundworld of my wireless sonification software, but that was not the main reason behind use of such different instrument. From the beginning, I aimed to build some kind of a sculpture, and 4 days before the performance, it still was not ready. Plan for the object was to create a pyramid from metallic rods, which would serve as representation of antenna, \textit{prism for streams}. So I decided to built one, during the performance, with the use of welding machine.
+To elaborate a bit more, I have always been intrigued by welding and the atmosphere it establishes. Extremely, harmfully bright lights, bursts of current through metals, high voltage buzz. Sonically, sound world of welding machine was actually quite matching to sound world of my wireless sonification software. But that was not the only reason behind the use of such different instrument. From the beginning, I aimed to build specific kind of a sculpture, and 4 days before the performance, it still was not ready. Plan for the object was to create a pyramid from metallic rods, which would serve as representation of antenna, \textit{prism for streams}. Therfore, it clicked, and I decided to built one, during the performance, with the use of the welding machine.
 
 \begin{figure}  
   \centering
@@ -233,16 +274,16 @@ To elaborate a bit more, I have always been intrigued by welding and atmosphere 
 	\label{fig:zvarac}
 \end{figure}
 
-I was not experienced welder at all, I have welded only two times in my life before the performance. This was suppose to scare me, but it only drive me further --- I achieved all the necessary protection and started to experiment (the day before). Interesting note might be, that the venue had to change their IGBT breakers in the power grid for higher current draws, because of my performance.
+I was not an experienced welder at all, I have welded only two times in my life before the performance. This was supposed to scare me, but it only drove me further --- I acquired all the necessary protection, such as special welding protection helmet and gloves, and started to experiment. It was the day before the performance. Interesting note might be, that the venue had to change their circuit breakers in the power grid for higher current draws, all because of my performance.
 
-During the performance, welding did a terrific job on creating two things. First being the atmosphere --- smell of hot metals, crackling and sizzling of the electric current are simply wonderful and spectacular. When I talked to the people from the audience after the performance, many have mentioned the connection to the welding happening `on the streets'. Every one has few experiences with welders and the bright light of the process, which actually connects to the second aspect I managed to create. 
+During the performance, welding did a terrific job on creating two things. First being the already mentioned atmosphere --- smell of hot metals, crackling and sizzling of the electric current were simply wonderful and spectacular. When I talked to the people from the audience after the performance, many have mentioned the connection to the welding happening `on the streets'. Everyone has few experiences with welders and the bright light of the process, which actually connects to the second aspect I managed to create. 
 
-That was the fact, that since I used dangerous amounts of light (welding light can burn parts of the lenses), people have closed their eyes. While performing, I was of course focused on the performance itself, but when I saw video from the event, I noticed most of the audience has either closed eyes or their heads are turned to ground. Many faces just reflected pure focus on the sound. This was of course amazing effect, which I actually didn't expect to happen in first place. Since I was basically forcing people to look away, they really did and listened.
+That was the fact, that since I used dangerous amounts of light (welding light can burn parts of the lenses), people have closed their eyes. While performing, I was of course focused on the performance itself, but when I saw video from the event, I noticed that most of the audience has either closed eyes or their heads are turned to the ground. Many faces just reflected pure focus on the sound. This was of course an amazing effect, which I actually did not expect to happen in first place. Since I was basically forcing people to look away, they really did and listened.
 
 \subsection{Future}
-I am still intrigued by network sonification, and I am actually working on new projects these days. One is recreation of Sonodump called \textit{Hlysnan}, more user friendly application for Mac OS X and Linux. Aim of this application is to give visual feedback to people (displaying of the raw data streams), as well as live control of the sniffing and sonificating parameters via GUI of the software. Project is still in alpha stage, migrated to C++ with use of OpenFrameworks framework for GUI development.
+I am still intrigued by the network sonification, and I am at the moment working on a new projects these days. One is recreation of Sonodump called \textit{Hlysnan}, designed to be more user friendly application for Mac OS X and Linux. Aim of this application is to give visual feedback to people (displaying of the raw data streams), as well as live control of the sniffing and sonificating parameters via graphical user interface of the software. Project is still in its alpha stage. For the core of the software, I have migrated to C++ with use of OpenFrameworks framework for interface development.
 
-Second project is not realized yet, but connects my idea of wireless sonification to handheld devices (as mentioned earlier). With use of affordable computers such as Raspberry Pi, I want to create pocket device which would than allow one to simply walk around and `listen to networks' in a mobile way. So far I have it working as easily deployable small box for quick sonifications, but it would be nice to have physical interface for interaction with sonification and sniffing process.
+Second project is not realized yet, but connects my idea of wireless sonification to handheld devices (as mentioned earlier). With use of affordable computers such as Raspberry Pi, I want to create pocket device which would than allow one to simply walk around and \emph{listen to networks} in a mobile way. So far I have it working as easily deployable small box for quick sonifications, but it would be nice to have physical interface for the interaction with the sonification and the sniffing process.
 
 \begin{figure}  
   \centering

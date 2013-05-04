@@ -1,0 +1,39 @@
+\documentclass{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,fit,backgrounds}
+\begin{document}
+\pagestyle{empty}
+
+\tikzstyle{block} = [rectangle, draw, 
+    text width=7em, text centered, minimum height=2.5em, node distance=3cm]
+\tikzstyle{line} = [draw, -triangle 90]
+
+
+\begin{tikzpicture}[node distance = 2cm, auto]
+    % Place nodes
+    \node [block] (nds) {\texttt{Network data stream}};
+	\node [block, above of=nds] (rni) {\texttt{Router, other network users}};
+    \node [block, right of=nds] (sniffer) {\texttt{Packet sniffer}};
+	\node [block, right of=sniffer] (aplay) {\texttt{Aplay - actual sonification}};
+	\node [block, below of=sniffer] (me) {\texttt{Me}};
+	\node [block, right of=aplay] (aout) {\texttt{Audio output}};
+
+    % Draw edges
+    \path [line] (rni) -- (nds);
+	\path [line] (nds) -- (sniffer);
+	\path [line] (sniffer) -- (aplay);
+	\path [line] (aplay) -- (aout);
+	\path [line, rounded corners=5pt] (me) -| node [near end, above, scale=.9, rotate=90] {\texttt{Arbitrary data}} (nds);
+	\path [line, rounded corners=5pt] (me) -| node [near end, below, scale=.8, rotate=90] {\texttt{\begin{tabular}{l}
+	Sonification\\ parameters 
+	\end{tabular}}} (aplay);
+	
+	\begin{scope}[on background layer]
+	    \node[fill=lightgray!50,inner sep = 4mm,fit=(aplay)(sniffer),label=above:\texttt{Computer}] {}; 
+	\end{scope}
+	
+\end{tikzpicture}
+
+\end{document}
