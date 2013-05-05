@@ -12,10 +12,11 @@
 \usepackage{url}
 \usepackage[T1]{fontenc} 
 \usepackage[osf]{libertine} 
-\usepackage[scaled=0.80]{beramono}
+\usepackage[scaled=0.90]{inconsolata}
 %\PassOptionsToPackage{scaled=0.75}{beramono}
 \usepackage[parfill]{parskip} 
 
+\usepackage{listings}
 
 \usepackage{graphicx}
 \usepackage{float}
@@ -177,7 +178,7 @@ As a part of my own experimentation with untraditional sources for musical or ge
 
 \subsection{Work process and technical details}
 
-To describe the process in higher detail, I would like to define some basic terms of the technical side of the project first, and then continue by describing my point of view on an even more important political and artistic side.
+To describe the process in higher detail, I would like to define some basic terms of the technical side of the project first, and then continue by describing my point of view on an even more important artistic side.
 
 % Describe the whole concept in general first
 % As musician using a metal box for performance
@@ -202,7 +203,7 @@ Main motivation for work with Linux / UNIX was availability of all the tools I r
 
 Good example is redirecting of a non-audio file to the sound card. What this represents is treating the file as a stream of data consequently feeded to the sound card as it would be audio data --- coming for example from a mp3 player. On some Linux distributions (Linux comes in various flavors) it is enough to write this command to the terminal:
 \begin{quotation}
-	\texttt{cat SONIFY\_ME.txt > /dev/dsp} 
+	\texttt{\textbf{\$} cat SONIFY\_ME.txt > /dev/dsp} 
 \end{quotation}
 
 Command \texttt{cat} reads the file \texttt{SONIFY\_ME.txt} --- which is a regular text file; and by using the symbol \texttt{>}, bash takes care of writing it to \texttt{/dev/dsp} --- which is a virtual port for sound card. Writing to this port opens a stream on the sound card and plays given data as audio.
@@ -212,57 +213,59 @@ This is very primitive and direct method of sonifiying any data and sometimes re
 
 I was particularly charmed by the sound of archive containing source codes of tcpdump itself. The song (or a file --- in this sense it is almost synonymous) offers range of gestures which are composed in a unexpectedly pleasing way. There are even appearances of few rhythmic patterns and primitive melodies. To give you a clear image, I have linked a recording of this composition in \autoref{appendix:a}.
 
-Basic process of reading network data and converting them directly to sound is not much harder. The \texttt{cat} command is now replace with \texttt(tcpdump), which is a tool mentioned before --- traffic analyzer, \emph{sniffer}.
+Basic process of reading network data and converting them directly to sound is not much harder. The \texttt{cat} command is now replaced with \texttt(tcpdump), which is a tool mentioned before --- traffic analyzer, \emph{sniffer}.
 \begin{quotation}
-	\texttt{tcpdump -i wlan0 -A > /dev/dsp} 
+	\texttt{\textbf{\$} tcpdump -i wlan0 -A > /dev/dsp} 
 \end{quotation}
 
 Tcpdump opens a packet capture process at a device \texttt{wlan0} (wireless module). Option \texttt{-A} represents conversion of the captured data to ASCII symbols, allowing us to always read them in the terminal as text. These are than again, streamed into \texttt{/dev/dsp} which serves as the sonifying module. This already gives us some amount of sonification of the network with just single line of code. 
 
 Next step was, to think about what other ways are there to experiment with. One of the options was change of the sample rate of the /dev/dsp (sound card) on-the-fly and thus change of the resulting sound as with the Sonodump. After some research on the topic it seemed as rather complicated and bulky approach, so I had to think of some other method. That was when I discovered \textbf{aplay}, part of ALSA. ALSA is amongst OSS and Jack one of sound systems used for audio on Linux. The most important function of aplay for me was the possibility to read data from pipeline (i.e.\ from other process) and to modify few parameters of the reading. Great addition was fact, that it is easy to have almost unlimited amount of aplays playing at the same time, even from one source. ALSA is handling the mixing of the streams to the sound card.
 
-Interaction (or as some people call it --- tampering) with data stream was, as I mentioned earlier, not an easy decision. There was part of me trying to preserve the original streams in their pure form, but in the end, I have decided to work with streams as with a live instrument. Of course, the control is not as direct as hitting the drum. My \emph{stick}, which I use to hit the system, is hidden in the terminal.
+Interaction (or as some people call it --- tampering) with data stream was, as I mentioned earlier, not an easy decision. There was part of me trying to preserve the original streams in their pure form, but in the end, I have decided to work with streams as with a live instrument. Of course, the control is not as direct as hitting the drum. My \emph{stick}, which I use to hit the system, is hidden in the terminal. 
 
 \begin{figure}  
   \centering
     \tikzstyle{block} = [rectangle, draw, 
-	    text width=6em, text centered, minimum height=2.5em, node distance=4.5cm, scale=0.8]
+	    text width=6em, text centered, minimum height=2.8em, node distance=4.5cm, scale=0.8, top color=white, bottom color=black!10, rounded corners=2pt]
 	\tikzstyle{line} = [draw, -triangle 90, scale=1.2]
 
 
 	\begin{tikzpicture}[node distance = 2cm, auto]
 	    % Place nodes
-	    \node [block] (nds) {\texttt{Network data stream}};
-		\node [block, above of=nds, node distance=3cm] (rni) {\texttt{Router, other network users}};
-	    \node [block, right of=nds] (sniffer) {\texttt{\textbf{tcpdump} \\Packet sniffer}};
-		\node [block, right of=sniffer] (aplay) {\texttt{\textbf{aplay} \\ Actual sonification}};
-		\node [block, below of=sniffer] (me) {\texttt{Me (Performer)}};
-		\node [block, right of=aplay] (aout) {\texttt{Audio output}};
+		\node [block] (nds) {Network data stream};
+		\node [block, above of=nds, node distance=3cm] (rni) {Router, other network users};
+		\node [block, right of=nds] (sniffer) {\textbf{tcpdump} \\Packet sniffer};
+		\node [block, right of=sniffer] (aplay) {\textbf{aplay} \\ Actual sonification};
+		\node [block, below of=sniffer] (me) {Me \\(Performer)};
+		\node [block, right of=aplay] (aout) {Audio output};
 
-	    % Draw edges
-	    \path [line] (rni) -- (nds);
+		% Draw edges
+		\path [line] (rni) -- (nds);
 		\path [line] (nds) -- (sniffer);
 		\path [line] (sniffer) -- (aplay);
 		\path [line] (aplay) -- (aout);
-		\path [line, rounded corners=5pt] (me) -| node [near end, above, scale=.8, rotate=90] {\texttt{Arbitrary data}} (nds);
-		\path [line, rounded corners=5pt] (me) -| node [near end, below, scale=.8, rotate=90] {\texttt{\begin{tabular}{l}
+		\path [line, rounded corners=5pt] (me) -| node [near end, above, scale=.8, rotate=90] {Arbitrary data} (nds);
+		\path [line, rounded corners=5pt] (me) -| node [near end, below, scale=.8, rotate=90] {\begin{tabular}{l}
 		Sonification\\ parameters 
-		\end{tabular}}} (aplay);
+		\end{tabular}} (aplay);
 
 		\begin{scope}[on background layer]
-		    \node[fill=lightgray!50,inner sep = 4mm,fit=(aplay)(sniffer),label=above:\texttt{Computer}] {}; 
+		    \node[fill=lightgray!50,inner sep = 4mm,fit=(aplay)(sniffer),label=above:Computer] {}; 
 		\end{scope}
-	
-		\end{tikzpicture}
-	\caption{Data flow of wireless network sonification}
+
+	\end{tikzpicture}
+	\caption{Data flow of Sonodump performance}
 	\label{fig:wifisonifi}
 \end{figure}
 
-From technical view, I was mainly generating arbitrary traffic using set of tools created by hackers (penetration testers in everyday job) dedicated to stress testing of networks. Creating such artificial loads is useful for few reasons: one being recording a reaction of routers to such massive amounts of data and the other one (a bit more evil one) is a bit more complex. When router crashes because of an overload, all users on the network must reconnect. And reconnecting means resending passwords as well, so it creates ideal situation for sniffing of the sensitive data --- from all users at almost the same time!
+From technical view, I was mainly generating arbitrary traffic using set of tools created by hackers (penetration testers in everyday job) dedicated to stress testing of networks. Creating such artificial loads is useful for few reasons: one being recording a reaction of routers to such massive amounts of data and the other one (a bit more evil one) is a bit more complex. When router crashes because of an overload, all users on the network must reconnect. And reconnecting means resending passwords as well, so it creates ideal situation for sniffing of the sensitive data.
+
+My use was obviously less malicious, I was experimenting with the behaviors of the sonic output under various kinds of attacks. To get a good overview over the whole process, see ~\ref{fig:wifisonifi}. I have sketched the basic concepts of the different aspects of the system, which should help you to understand flow of information and the consequent transformation to audible domain.
 
 At this point I have had prepared a sufficient toolkit for my upcoming performance and installation, therefore I started to focus on the artistic aspects, nuances of the work.
 
-\subsection{Performance}
+\subsection{Performance and Installation}
 I have performed only once with this setup. As mentioned, it was on AudioArt festival in Kraków and it has been successful, for few various reasons. My initial approach was to try to create some kind of static object in space, which would than perform \emph{for me}, as in --- instead of me. I would be sitting away from the device with laptop in my lap and I would control the process from there, over network. This has been the idea until around 4 days before the performance, when after talking with my friend I have decided to twist my plan in quite radical fashion and do a live welding of my instalation during the performance.
 
 To elaborate a bit more, I have always been intrigued by welding and the atmosphere it establishes. Extremely, harmfully bright lights, bursts of current through metals, high voltage buzz. Sonically, sound world of welding machine was actually quite matching to sound world of my wireless sonification software. But that was not the only reason behind the use of such different instrument. From the beginning, I aimed to build specific kind of a sculpture, and 4 days before the performance, it still was not ready. Plan for the object was to create a pyramid from metallic rods, which would serve as representation of antenna, \textit{prism for streams}. Therfore, it clicked, and I decided to built one, during the performance, with the use of the welding machine.
@@ -279,6 +282,10 @@ I was not an experienced welder at all, I have welded only two times in my life 
 During the performance, welding did a terrific job on creating two things. First being the already mentioned atmosphere --- smell of hot metals, crackling and sizzling of the electric current were simply wonderful and spectacular. When I talked to the people from the audience after the performance, many have mentioned the connection to the welding happening `on the streets'. Everyone has few experiences with welders and the bright light of the process, which actually connects to the second aspect I managed to create. 
 
 That was the fact, that since I used dangerous amounts of light (welding light can burn parts of the lenses), people have closed their eyes. While performing, I was of course focused on the performance itself, but when I saw video from the event, I noticed that most of the audience has either closed eyes or their heads are turned to the ground. Many faces just reflected pure focus on the sound. This was of course an amazing effect, which I actually did not expect to happen in first place. Since I was basically forcing people to look away, they really did and listened.
+
+The installation was continuing in similar manner as a performance. By using \textbf{bash}, shell scripting language, I was able to create various simulations of myself. I programmed a simple robot, which was starting attacks on the local network, the same way as I would. This allowed me to create installation which was interesting enough and could have been presented in place for longer period of time without my attention.
+
+Unfortunately, I have ran into problems with the installation during weekend, since gallery owners were turning their routers off for that period (since no one was working in offices). Therefore, wireless sonification did not work for few hours, since there was no network to be sonified. Fortunately I managed to provide my own router and setup my own network in place shortly.
 
 \subsection{Future}
 I am still intrigued by the network sonification, and I am at the moment working on a new projects these days. One is recreation of Sonodump called \textit{Hlysnan}, designed to be more user friendly application for Mac OS X and Linux. Aim of this application is to give visual feedback to people (displaying of the raw data streams), as well as live control of the sniffing and sonificating parameters via graphical user interface of the software. Project is still in its alpha stage. For the core of the software, I have migrated to C++ with use of OpenFrameworks framework for interface development.
@@ -302,14 +309,14 @@ Organizers have happily accepted my proposal for the exact topic, being sonifica
 
 Workshop resulted in few interesting ideas. One of the most inspiring one was the one of Lucie Vítková. Lucie actually studied at Royal Conservatory for a year after the workshop. Her idea was to do direct live interpretation of the street.  In the beginning, we have split the street into sections and each of us was responsible for sonification of his part. Each of us had different instrument and different set of rules. Sonification worked via visual clues, which we (as musicians) interpreted into sounds / music. Visual clues could have been anything happening on the street --- trams, walkers or wind. One of us decided to sonify a person walking on the street by simulating the rhythm of his footsteps on a small home-build synthesizer.
 
-Another project, by Václav Peloušek, was based on my research of wireless sonification. He has harvested (or ``sniffed'') portions of data from surroundings of our workshop space and sonified them in rather unusual way. He has used online services which allow one to read out given text and he fed them the raw wireless data, containing plenty of humanly unreadable data. He used service which offers ``czech'' voice, allowing to have amusing pronunciation of these noisy characters in a sequence. Last project to mention was one of Peter Gonda, which used open source software \textbf{driftnet} to work on a visual level. Driftnet allows one to sniff wireless network and directly parse images in the streams. This means, that whenever is one opening a certain image on a network, we were able to see the image directly on the screen.
+Another project, by Václav Peloušek, was based on my research of wireless sonification. He has harvested (or `sniffed') portions of data from surroundings of our workshop space and sonified them in rather unusual way. He has used online services which allow one to read out given text and he fed them the raw wireless data, containing plenty of humanly unreadable data. He used service which offers czech (in sense of pronunciation) voice, allowing to have amusing pronunciation of these noisy characters in a sequence. Last project to mention was one of Peter Gonda, which used open source software \textbf{driftnet} to work on a visual level. Driftnet allows one to sniff wireless network and directly parse images in the streams. This means, that whenever is one opening a certain image on a network, we were able to see the image directly on the screen.
 
-I have as well realized a project I had in mind for some time, that being timetable sonification. Timetables are quite accurate in reflecting certain rhythms of city. They are carefully adjusted for the needs of citizens to allow smooth and on-time distribution, especially in peak hours. This results in various frequencies of arrivals of transport, depending on the time of the day. For this purposes, I have constructed a patch called ``Šalina samohrajka'' (šalina means tram in slang of Brno). Than I harvested few different timetables of trams in Brno and fed them to the patch to create a score (see fig. ~\ref{fig:salina}).
+I have as well realized a project I had in mind for some time, that being timetable sonification. Timetables are quite accurate in reflecting certain rhythms of city. They are carefully adjusted for the needs of citizens to allow smooth and on-time distribution, especially in peak hours. This results in various frequencies of arrivals of transport, depending on the time of the day. For this purposes, I have constructed a Max patch called ``Šalina samohrajka'' (šalina means tram in slang of Brno). Than I harvested few different timetables of trams in Brno and fed them to the patch to create a score (see fig. ~\ref{fig:salina}).
 
 \begin{figure}  
   \centering
     \includegraphics[width=0.9\textwidth]{img/salina}
-	\caption{Šalina Samohrajka --- timetable sonification MaxMSP patch}
+	\caption{Šalina Samohrajka --- timetable sonification Max patch}
 	\label{fig:salina}
 \end{figure}
 
