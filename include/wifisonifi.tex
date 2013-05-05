@@ -9,31 +9,33 @@
 \tikzstyle{block} = [rectangle, draw, 
     text width=7em, text centered, minimum height=2.5em, node distance=3cm,
 	top color=white, % a shading that is white at the top...
-	    bottom color=black!10] % and something else at the bottom]
-\tikzstyle{line} = [draw, -triangle 90]
+	bottom color=black!10,
+	rounded corners=2pt] % and something else at the bottom]
+\tikzstyle{line} = [draw, -triangle 90, rounded corners=5pt]
 
 
 \begin{tikzpicture}[node distance = 2cm, auto]
     % Place nodes
-    \node [block] (nds) {\texttt{Network data stream}};
-	\node [block, above of=nds] (rni) {\texttt{Router, other network users}};
-    \node [block, right of=nds] (sniffer) {\texttt{Packet sniffer}};
-	\node [block, right of=sniffer] (aplay) {\texttt{Aplay - actual sonification}};
-	\node [block, below of=sniffer] (me) {\texttt{Me}};
-	\node [block, right of=aplay] (aout) {\texttt{Audio output}};
-
-    % Draw edges
-    \path [line] (rni) -- (nds);
-	\path [line] (nds) -- (sniffer);
-	\path [line] (sniffer) -- (aplay);
-	\path [line] (aplay) -- (aout);
-	\path [line, rounded corners=5pt] (me) -| node [near end, above, scale=.9, rotate=90] {\texttt{Arbitrary data}} (nds);
-	\path [line, rounded corners=5pt] (me) -| node [near end, below, scale=.8, rotate=90] {\texttt{\begin{tabular}{l}
-	Sonification\\ parameters 
-	\end{tabular}}} (aplay);
+    \node [block] (me) {\textbf{Me} \\ (Performer)};
+	\node [block, below of=me, xshift=-5em, node distance=3cm] (raspi) {Raspberry Pi \\ running ChucK};
+	\node [block, below of=me, xshift=5em, node distance=3cm] (amp1) {Amplifier 1};
+	\node [block, below of=raspi, node distance=2.5cm] (amp2) {Amplifier 2};
+	\node [block, below of=amp1, node distance=2.5cm] (trans1) {Transducer 1};
+	\node [block, below of=amp1, node distance=2.5cm, xshift=10em] (trans2) {Transducer 2};
+	\node [block, below of=amp2, node distance=2.5cm] (trans3) {Transducer 3};
 	
+    % Draw edges
+    \path [line, dashed] (me) -| node [near end, above, scale=.8, rotate=90, align=center, text centered, text width=3cm] {wireless \\ remote control} (raspi);
+	\path [line] (me) -| node [near end, below, scale=.8, rotate=90] {audio} (amp1);
+	\path [line] (raspi) -- node [above, scale=.8, rotate=90] {audio} (amp2);
+	\path [line] (amp1) -- (trans1);
+	\path [line] (amp1) -| (trans2);
+	\path [line] (amp2) -- (trans3);
+
 	\begin{scope}[on background layer]
-	    \node[fill=lightgray!50,inner sep = 4mm,fit=(aplay)(sniffer),label=above:\texttt{Computer}] {}; 
+	    \node[fill=lightgray!50,inner sep = 2mm,fit=(trans1),label=below:Metallic Plate 1] {}; 
+		\node[fill=lightgray!50,inner sep = 2mm,fit=(trans2),label=below:Oil barrel] {}; 
+		\node[fill=lightgray!50,inner sep = 2mm,fit=(trans3),label=below:Metallic Plate 2] {};
 	\end{scope}
 	
 \end{tikzpicture}
