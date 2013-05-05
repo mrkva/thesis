@@ -210,18 +210,25 @@ Interaction (or as some people call it --- tampering) with data stream was, as I
 
 \begin{figure}  
   \centering
-    \tikzstyle{block} = [rectangle, draw, 
-	    text width=6em, text centered, minimum height=2.8em, node distance=4.5cm, scale=0.8, top color=white, bottom color=black!10, rounded corners=2pt]
+    \tikzstyle{block} = [
+		rectangle, 
+		draw, 
+	    text width=6em, 
+		text centered, 
+		minimum height=2.8em, node distance=4.5cm, scale=0.8, 
+		%top color=white, 
+		%bottom color=black!10, 
+		rounded corners=2pt]
 	\tikzstyle{line} = [draw, -triangle 90, scale=1.2]
 	
 	\begin{tikzpicture}[node distance = 2cm, auto]
 	    % Place nodes
 		\node [block] (nds) {Network data stream};
 		\node [block, above of=nds, node distance=3cm] (rni) {Router, other network users};
-		\node [block, right of=nds] (sniffer) {\textbf{tcpdump} \\Packet sniffer};
-		\node [block, right of=sniffer] (aplay) {\textbf{aplay} \\ Actual sonification};
+		\node [block, right of=nds, node distance=4cm] (sniffer) {\textbf{tcpdump} \\Packet sniffer};
+		\node [block, right of=sniffer, node distance=4cm] (aplay) {\textbf{aplay} \\ Actual sonification};
 		\node [block, below of=sniffer] (me) {\textbf{Me} \\ (Performer)};
-		\node [block, right of=aplay] (aout) {Audio output};
+		\node [block, right of=aplay, node distance=4cm] (aout) {Audio output};
 
 		% Draw edges
 		\path [line] (rni) -- (nds);
@@ -388,7 +395,6 @@ For the future, I see myself starting to work with Binmatu installations as well
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\clearpage
 \section{Phasolume} Phasolume is an audiovisual installation that I've authored in collaboration with Agnes Szelag.
 
 \subsection{Introduction} 
@@ -434,35 +440,34 @@ I really enjoyed this form of work as well as collaboration with an artist who c
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\clearpage
 \section{Site specific resonances}
 
 \subsection{Introduction}
 
-Site specific resonances was my latest project during the period of writing of this thesis. It was a sound installation setup in Vrije Academie Gemak in The Hague.
+\emph{Site specific resonances} was my latest project during the period of writing of this thesis. It was a sound installation exhibited in Vrije Academie Gemak in The Hague.
 
-The project had started by my proposal to the gallery for creating site-specific sound installation. My aim was to do research on few topics, close to my aesthetics --- minimalism, hidden technology and reusing / repurposing of materials. It ended up in creating set of performances more than installation, which I will explain in the end of the section.
+The project had started by my proposal to the gallery for creating a site-specific sound installation. My aim was to do a research on few topics, close to my aesthetics --- minimalism, hidden technology and reusing / repurposing of materials. It ended up quite differently --- instead of a permanent installation, I have built a special environment to perform with. 
 
-I see the installation as somewhat continuation of my Binmatu project, where I am focusing on drones and subtle psychoacoustical effects hidden in the compositions. For this purposes, I have decided to work with resonant frequencies of the space. I have measured the room properties with measurement microphone and impulse response, than I extracted the most resonant frequencies and started composing.
+I see the project as somewhat continuation of my Binmatu project, where I am focusing on drones and subtle psychoacoustic effects, hidden in the compositions.
+
+I have decided to work with resonant frequencies of the space. By measuring the room properties with measurement microphone and impulse response I have extracted the most resonant frequencies and started composing.
 
 \subsection{Technical aspects}
 
 But before that, it is important to mention, that I have decided (as part of the minimalistic aesthetics) not to use regular speakers. I see them as somehow distracting elements. And, the method I have used instead --- tactile transducers --- worked much better visually, and sonically.
 
-Tactile transducers are basically moving coils (like ones in the speaker), but without the speaker cone. They can be attached to any object, which has at least a bit moving body, and than they can use it as a cone. In a result, the object becomes a speaker. 
+Tactile transducers are basically moving coils (like ones in the speaker), but without the speaker cone. They can be attached to any object, which has at least a bit moving body. Tactile transducers utilize the body as a speaker cone, and in a result, the object becomes a speaker. 
 
-This of course brings many interesting aspects to the speaker. Mainly, it is inheriting the acoustic imperfections of the object. E.g.\ metallic plate resonates at certain frequencies and presents a long reverb (such as in plate reverb). I have, of course, exercised this greatly in my project.
+This of course brings many interesting aspects to the newly created sound emitter. Mainly, it is inheriting the acoustic imperfections of the object. E.g.\ metallic plate resonates at certain frequencies and presents a long reverb (such as in plate reverb). I have, of course, exercised this greatly in my project.
 
 Firstly, I have acquired various interesting objects which were laying around in the workshop of the gallery --- two metallic plates and one empty oil barrel. Than I created three different `stages' --- three different sound emitting objects. Two of those were connected to one amplifier and than to my computer, and one stage was totally separate from the main computer. To achieve this visual separation --- no cables running through the space\footnote{I believe there is important visual aspect to that. Element of surprise, perception of the object as truly autonomous sound emitting unit.} I have used few different technologies I had on hand. Sound was generated from microcomputer Raspberry Pi running sound programming language Chuck. This audio was than fed to small amplifier and finally to the object (to the transducer connected to it).
 
 \begin{figure}  
   \centering
-    \tikzstyle{block} = [rectangle, draw, 
-	    text width=6em, text centered, minimum height=2.8em, node distance=4.5cm, scale=0.8, top color=white, bottom color=black!10, rounded corners=2pt]
 		\tikzstyle{block} = [rectangle, draw, 
 		    text width=7em, text centered, minimum height=2.5em, node distance=3cm,
-			top color=white, % a shading that is white at the top...
-			bottom color=black!10,
+			%top color=white, % a shading that is white at the top...
+			%bottom color=black!10,
 			rounded corners=2pt] % and something else at the bottom]
 		\tikzstyle{line} = [draw, -triangle 90, rounded corners=5pt]
 
