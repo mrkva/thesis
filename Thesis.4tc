@@ -1,0 +1,46 @@
+\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi
+\doTocEntry\toclikechapter{}{\csname a:TocLink\endcsname{1}{x1-1000}{QQ2-1-1}{Acknowledgements}}{4}\relax 
+\doTocEntry\toclikechapter{}{\csname a:TocLink\endcsname{1}{x1-2000}{QQ2-1-2}{Contents}}{5}\relax 
+\doTocEntry\tocchapter{1}{\csname a:TocLink\endcsname{1}{x1-30001}{QQ2-1-3}{Introduction}}{7}\relax 
+\doTocEntry\tocchapter{2}{\csname a:TocLink\endcsname{1}{x1-40002}{QQ2-1-4}{Sonification and audification experiments}}{9}\relax 
+\doTocEntry\tocsection{2.1}{\csname a:TocLink\endcsname{1}{x1-50002.1}{QQ2-1-5}{Thoughts on current state of sonification}}{9}\relax 
+\doTocEntry\toclof{2.1}{\csname a:TocLink\endcsname{1}{x1-5001r1}{}{\ignorespaces Elektrosluch 1.0}}{figure}\relax 
+\doTocEntry\toclof{2.2}{\csname a:TocLink\endcsname{1}{x1-5002r2}{}{\ignorespaces Detektors ``Detektor'' device}}{figure}\relax 
+\doTocEntry\tocsection{2.2}{\csname a:TocLink\endcsname{1}{x1-60002.2}{QQ2-1-8}{Wireless network sonification}}{22}\relax 
+\doTocEntry\tocsubsection{2.2.1}{\csname a:TocLink\endcsname{1}{x1-70002.2.1}{QQ2-1-9}{Work process and technical details}}{22}\relax 
+\doTocEntry\toclof{2.3}{\csname a:TocLink\endcsname{1}{x1-7001r3}{}{\ignorespaces Data flow of Sonodump performance}}{figure}\relax 
+\doTocEntry\tocsubsection{2.2.2}{\csname a:TocLink\endcsname{1}{x1-80002.2.2}{QQ2-1-11}{Performance and Installation}}{30}\relax 
+\doTocEntry\toclof{2.4}{\csname a:TocLink\endcsname{1}{x1-8001r4}{}{\ignorespaces Sonodump performance}}{figure}\relax 
+\doTocEntry\tocsubsection{2.2.3}{\csname a:TocLink\endcsname{1}{x1-90002.2.3}{QQ2-1-13}{Future}}{35}\relax 
+\doTocEntry\toclof{2.5}{\csname a:TocLink\endcsname{1}{x1-9001r5}{}{\ignorespaces Hlysnan v0.1 --- reinventing the sonodump}}{figure}\relax 
+\doTocEntry\tocsection{2.3}{\csname a:TocLink\endcsname{1}{x1-100002.3}{QQ2-1-15}{City attributes sonification}}{39}\relax 
+\doTocEntry\toclof{2.6}{\csname a:TocLink\endcsname{1}{x1-10001r6}{}{\ignorespaces \IeC {\v S}alina Samohrajka --- timetable sonification Max patch}}{figure}\relax 
+\doTocEntry\toclof{2.7}{\csname a:TocLink\endcsname{1}{x1-10002r7}{}{\ignorespaces Street sonification project in front of House of Arts in Brno}}{figure}\relax 
+\doTocEntry\tocchapter{3}{\csname a:TocLink\endcsname{1}{x1-110003}{QQ2-1-18}{Other works}}{47}\relax 
+\doTocEntry\tocsection{3.1}{\csname a:TocLink\endcsname{1}{x1-120003.1}{QQ2-1-19}{Binmatu}}{47}\relax 
+\doTocEntry\tocsubsection{3.1.1}{\csname a:TocLink\endcsname{1}{x1-130003.1.1}{QQ2-1-20}{Introduction}}{47}\relax 
+\doTocEntry\tocsubsection{3.1.2}{\csname a:TocLink\endcsname{1}{x1-140003.1.2}{QQ2-1-21}{Starting point}}{48}\relax 
+\doTocEntry\tocsubsection{3.1.3}{\csname a:TocLink\endcsname{1}{x1-150003.1.3}{QQ2-1-22}{Binmatu}}{49}\relax 
+\doTocEntry\toclof{3.1}{\csname a:TocLink\endcsname{1}{x1-15001r1}{}{\ignorespaces One of the Binmatu visuals}}{figure}\relax 
+\doTocEntry\tocsubsection{3.1.4}{\csname a:TocLink\endcsname{1}{x1-160003.1.4}{QQ2-1-24}{Selected performances and installations}}{53}\relax 
+\doTocEntry\toclof{3.2}{\csname a:TocLink\endcsname{1}{x1-16001r2}{}{\ignorespaces Binmatu performance in Studio Loos}}{figure}\relax 
+\doTocEntry\tocsubsection{3.1.5}{\csname a:TocLink\endcsname{1}{x1-170003.1.5}{QQ2-1-26}{Conclusion}}{57}\relax 
+\doTocEntry\tocsection{3.2}{\csname a:TocLink\endcsname{1}{x1-180003.2}{QQ2-1-27}{Phasolume}}{58}\relax 
+\doTocEntry\tocsubsection{3.2.1}{\csname a:TocLink\endcsname{1}{x1-190003.2.1}{QQ2-1-28}{Introduction}}{58}\relax 
+\doTocEntry\tocsubsection{3.2.2}{\csname a:TocLink\endcsname{1}{x1-200003.2.2}{QQ2-1-29}{Working process}}{59}\relax 
+\doTocEntry\toclof{3.3}{\csname a:TocLink\endcsname{1}{x1-20001r3}{}{\ignorespaces Custom designed circuit for Phasolume}}{figure}\relax 
+\doTocEntry\tocsubsection{3.2.3}{\csname a:TocLink\endcsname{1}{x1-210003.2.3}{QQ2-1-31}{Concept and execution}}{63}\relax 
+\doTocEntry\tocsubsection{3.2.4}{\csname a:TocLink\endcsname{1}{x1-220003.2.4}{QQ2-1-32}{Exhibition}}{64}\relax 
+\doTocEntry\tocsubsection{3.2.5}{\csname a:TocLink\endcsname{1}{x1-230003.2.5}{QQ2-1-33}{Conclusion}}{64}\relax 
+\doTocEntry\tocsection{3.3}{\csname a:TocLink\endcsname{1}{x1-240003.3}{QQ2-1-34}{Site specific resonances}}{64}\relax 
+\doTocEntry\tocsubsection{3.3.1}{\csname a:TocLink\endcsname{1}{x1-250003.3.1}{QQ2-1-35}{Introduction}}{65}\relax 
+\doTocEntry\tocsubsection{3.3.2}{\csname a:TocLink\endcsname{1}{x1-260003.3.2}{QQ2-1-36}{Technical aspects}}{65}\relax 
+\doTocEntry\toclof{3.4}{\csname a:TocLink\endcsname{1}{x1-26001r4}{}{\ignorespaces System of \emph  {Site specific resonances} installation}}{figure}\relax 
+\doTocEntry\tocsubsection{3.3.3}{\csname a:TocLink\endcsname{1}{x1-270003.3.3}{QQ2-1-38}{Performances}}{69}\relax 
+\doTocEntry\tocsubsection{3.3.4}{\csname a:TocLink\endcsname{1}{x1-280003.3.4}{QQ2-1-39}{Conclusion and future}}{69}\relax 
+\doTocEntry\toclof{3.5}{\csname a:TocLink\endcsname{1}{x1-28001r5}{}{\ignorespaces Site specific resonances performance}}{figure}\relax 
+\doTocEntry\tocchapter{4}{\csname a:TocLink\endcsname{1}{x1-290004}{QQ2-1-41}{Conclusion}}{74}\relax 
+\doTocEntry\tocappendix{A}{\csname a:TocLink\endcsname{1}{x1-30000A}{QQ2-1-42}{List of selected performances, exhibitions, workshops and lectures}}{76}\relax 
+\doTocEntry\tocappendix{B}{\csname a:TocLink\endcsname{1}{x1-31000B}{QQ2-1-43}{List of links to my projects}}{79}\relax 
+\doTocEntry\toclikechapter{}{\csname a:TocLink\endcsname{1}{x1-32000B}{QQ2-1-44}{References}}{81}\relax 
+\doTocEntry\tocchapter{}{\csname a:TocLink\endcsname{1}{Q1-1-45}{}{References}}{81}\relax 
