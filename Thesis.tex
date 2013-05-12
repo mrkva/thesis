@@ -15,24 +15,20 @@
 \usepackage[scaled=0.90]{inconsolata}
 \usepackage[parfill]{parskip} 
 \usepackage{listings}
-
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{setspace}
-
+\onehalfspacing
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows,fit,backgrounds}
-\onehalfspacing
 
-%\usepackage[style=apa,backend=biber]{biblatex}
-%\addbibresource{general.bib}
+\title{Streams and currents:\\
+Wireless network sonification and other works} 
 
-
-
-\title{Streams and currents:\\Wireless network sonification and other works} 
 \author{Jonáš Gruska\\
 Bachelor's Thesis\\
 Institute of Sonology} 
+
 \date{\today}
 
 \begin{document}
@@ -54,7 +50,7 @@ Institute of Sonology}
 
 
 \chapter*{Acknowledgements}
-I would like to thank my parents for supporting me during my studies. I would never be able to learn what I love without them. And of course, I would like to thank my mentor Paul Berg for his patience with my chaotic behavior and the whole Institute of Sonology for helping me to become who I want to be. Lastly, I would like to thank Janka Kobolková, Marko Uzunovski, Xavier De Wannemaeker, Maya Verlaak, Daniel Tóth, Peter Sych, Marek Chołoniewski and all my other friends in supporting me in my work, inspiring and pushing me forward.
+I would like to thank my parents for supporting me during my studies. I would never be able to learn what I love without them. And of course, I would like to thank my mentor Paul Berg for his patience with my chaotic behavior and the whole Institute of Sonology for helping me to become who I want to be. Lastly, I would like to thank Janka Kobolková, Marko Uzunovski, Xavier De Wannemaeker, Maya Verlaak, Daniel Tóth, Peter Sych, Marek Chołoniewski and all my other friends in supporting me in my work, inspiring and pushing me forward. My special thanks go to Marek Slobodník, Norman Teale and Agnes Szelang for helping me with my language.
 
 \setcounter{tocdepth}{1}
 \tableofcontents
@@ -70,7 +66,7 @@ Sonification has grabbed my interest since my first experiments with programming
 
 This is the reason why I have chosen topics of sonification as a key element to my thesis --- it serves as one of the main inspirations to many of my works in various degrees. In the next chapters, I will try to describe the context of my work with a few significant examples and comparisons from the art world and the world of science, to give a better idea of where my ideas started. I will also attempt to distinguish two separate traits in approaches towards sonification, relevant for sonological context, and I will try to give an overview of devices which allow us to sonificate \textit{in situ}, the ones with a scientific goal and those with purely aesthetic use.
 
-After the topic of sonification, I will describe several of the most important projects I have worked on during my years at Sonology (2009--2013), which should help to define my artistic approach in examples. This approach might not appear coherent at first, but one might notice that my work always shares specific qualities. A passion for technology, which is often present but not visible, a love for sound as the pure physical vibration of the air, and an effort to turn the invisible into the audible.
+After the topic of sonification, I will describe several of the most important projects I have worked on during my years at Intitute of Sonology (2009--2013), which should help to define my artistic approach in examples. This approach might not appear coherent at first, but one might notice that my work always shares specific qualities. A passion for technology, which is often present but not visible, a love for sound as the pure physical vibration of the air, and an effort to turn the invisible into the audible.
 
 This specific style of work is not something I have been developing consciously, one could say it came more from within. I was drawn towards technology since I was a child, spending endless hours in front of the flickering screens and lately in a cloud of soldering fumes. But technology by itself does not satisfy me, and I am trying to see beyond engineering, through the streams of electrons. Because my intrinsic power is sound. But I need bits and volts to reach it.
 
@@ -292,36 +288,36 @@ The second project is not realized yet, but connects my idea of wireless sonific
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \clearpage
-\section{City attributes sonification}
+\section{City Attributes Sonification}
 
-City attributes sonification is a project I have been working on in 2011 in the Czech Republic. At the time, I have been invited to lead a workshop on topics dealing with sound, city and architecture. Event was a part of a bigger festival dedicated to city of Brno.
+City attributes sonification is a project that I have worked on in 2011 in the Czech Republic. At the time, I was invited to lead a workshop on topics dealing with sound, city, and architecture. The event was a part of the bigger festival dedicated to the city of Brno.
 
-Organizers have happily accepted my proposal for the exact topic --- the sonification of the city. I was very curious to see what will people come up with and it actually turned out rather nicely. 
+The festival organizers happily accepted my proposal for the exact topic --- the sonification of the city. I was very curious to see what people would come up with and it actually turned out very well!
 
-Workshop lasted 4 days. In the beginning I have introduced the basic concepts of sonification and audification, presented few significant (yet varying) works in the field and commenced brainstorming. Afterwards, it continued with brainstorming sessions regarding specific projects and working on the technical realization.
+The workshop lasted for 4 days. In the beginning I introduced the basic concepts of sonification and audification, presented a few significant (yet varying) works in the field, and then commenced with the brainstorming. Afterwards, we continued the brainstorming sessions regarding specific projects and worked on the technical realizations.
 
-Workshop resulted in few interesting ideas. One of the most inspiring one was the work of Lucie Vítková. Lucie actually studied at Royal Conservatory for a year after the workshop. Her idea was to do direct live sonic interpretation of the street. In the beginning, we have split the street into sections and each of us --- participants was responsible for sonification of his part. Each of us had different instrument and different set of rules. Sonification worked via visual clues, which we (as musicians) interpreted into sounds / music. Visual clues could have been anything happening on the street --- trams, walkers or wind. To give an example, one of us decided to sonify a person walking on the street by simulating the rhythm of his footsteps on a small home-build synthesizer.
+The workshop resulted in a few interesting ideas. One of the most inspiring works was the piece by Lucie Vítková. Lucie went on to study at the Royal Conservatory for a year after the workshop. Her idea was to do a direct/live sonic interpretation of the street. In the beginning, we split the street into sections and each participant was responsible for the sonification of his/her part. Each of us had different instruments and different sets of rules. The sonifications worked via visual cues, which we (as musicians) interpreted into sounds / music. Visual cues could have been anything happening on the street --- trams, walkers, or even the wind. For example, one of us decided to abstractly sonify a person walking on the street by simulating the rhythm of his footsteps on a small homemade synthesizer.
 
-Another project, by Václav Peloušek, was based on my research of wireless sonification. He has harvested (or `sniffed') portions of the data from surroundings of our workshop space and sonified them in rather unusual way. He has used online services, which allow one to read out given text and he fed them the raw wireless data. This data were containing plenty of humanly unreadable data. The service was offering Czech (in sense of pronunciation) voice, allowing him to have amusing pronunciation of these noisy characters in a sequence. Last project to mention was one of Peter Gonda, which used open source software \textbf{driftnet} to work on a visual level. Driftnet allows one to sniff wireless network and directly parse images in the streams. This means, that whenever is one opening a certain image on a network, we were able to see the image directly on the screen. Gonda created particular way of displaying of the images in floating bubbles and projected the results on the wall during his performance.
+Another project, by Václav Peloušek, was based on my research in the field of wireless sonification. Václav harvested (or `sniffed') portions of the wireless network data from the surroundings of our workshop space and sonified them in a rather unusual way. He used online artificial vocalization services, which allowed him to read out loud a given text once he had fed it the raw wireless data. This data contained plenty of human-unreadable data. The service offered a Czech (in language and in pronunciation) voice, allowing him to have an amusing pronunciation of these noisy characters in a sequence. The last project to mention was that of Peter Gonda, who used an open source software named \textbf{driftnet} to work more on a visual level. Driftnet allows one to sniff wireless networks and to directly parse images in the network streams. This means that whenever someone opened a certain image on a network, we were able to see the image directly on the screen. Gonda created a particular method of displaying the images in floating bubbles and projected the results on the wall during his performance.
 
-I have as well realized a project I had in mind for some time, timetable sonification. Timetables are quite accurate in reflecting certain rhythms of city. They are carefully adjusted for the needs of citizens to allow smooth and on-time distribution, especially during peak hours. This results in various frequencies of arrivals of transport, depending on the time of the day. For this purposes, I have constructed a Max patch called ``Šalina samohrajka'' (šalina means tram in colloquial language of Brno). Than I harvested few different timetables of trams in Brno and fed them to the patch to create a score (see fig.~\ref{fig:salina}).
+I also realized a project that I had in mind for some time, which I refer to as ``timetable sonificatio''. Timetables (trains, planes, busses, etc.) are quite accurate in reflecting certain rhythms of the city. They are carefully adjusted to the needs of the citizens to allow smooth and on-time distribution, especially during peak hours. This results in various frequencies of arrivals of transport, depending on the time of day. For this purpose, I constructed a Max patch called ``Šalina samohrajka'' (šalina means tram in the colloquial language of Brno). Then, I harvested a few different timetables of the Brno trams and fed them into the patch to create a score (see fig.~\ref{fig:salina}).
 
 \begin{figure}  
   \centering
     \includegraphics[width=0.9\textwidth]{img/salina}
-	\caption{Šalina Samohrajka --- timetable sonification Max patch}
-	\label{fig:salina}
+        \caption{Šalina Samohrajka --- timetable sonification Max patch}
+        \label{fig:salina}
 \end{figure}
 
-Each of the scores (tram lines) was a binary grid. This means, it had 1440 fields (for every minute in a day) and a field where no tram arrived was 0, and the one with arriving 1. These scores served as triggers for my percussive synthesizer, built in the patch. I have decided to work with percussive sounds, since my aim was to represent certain kind of rhythm of the city, its `breathing'. On the final day of the workshop, I have (amongst others participants) performed with this patch. I have mainly controlled the synthesis and the playback time (the speed of the day) to create various situations and perceptual differences of a time in the city. 
+Each of the scores (tram lines) represents a binary grid. This means that the timetable had 1440 fields (one for every minute in a day), and a field where no tram arrived was represented by a 0, while the one with a tram arriving was represented by a 1. These scores served as triggers for my percussive synthesizer which was built into the patch. I decided to work with percussive sounds, since my aim was to represent certain kinds of rhythms of the city, or its `breathing'. On the final day of the workshop, I performed (amongst other participants) with this patch. In the performance, I mainly controlled the synthesis and the playback time (the speed of the day) to create various situations and perceptual differences of a time in the city. 
 
-Whole project was rather interesting experience, unfortunately I was not able to motivate everyone to do solid work. Few people had natural fear of computers and did not really understood the concepts, which was of course problematic. But for the ideas such as the one of Lucie, I know it was worth doing.
+The whole project was a rather interesting experience, but unfortunately I was not able to motivate everyone to do solid work. Many of the people had a natural fear of computers and did not really understand the concepts, which was problematic. But for the ideologically sound ideas (such as the one of Lucie), I now know that it was worth doing.
 
 \begin{figure}  
   \centering
     \includegraphics[width=0.9\textwidth]{img/workshop}
-	\caption{Street sonification project in front of House of Arts in Brno}
-	\label{fig:workshop}
+        \caption{Street sonification project in front of House of Arts in Brno}
+        \label{fig:workshop}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -329,114 +325,114 @@ Whole project was rather interesting experience, unfortunately I was not able to
 
 \chapter{Other works} 
 
-\section{Binmatu} Binmatu is an audiovisual drone project I have been working on and performing with during last two years.
+\section{Binmatu} Binmatu is an audio-visual drone project that I have been working on and performing with during the last two years.
 
 \subsection{Introduction}
 
-I have never been very extensive listener of drone music and I could hardly relate to most of the works I have heard. The idea of extremely slow movements did not please me aesthetically nor technically. At the time, I preferred wild improvisations with high pace of changes and especially high variety of sonic content packed into short compositions.
+I have never been a very extensive listener of drone music and I could hardly relate to most of the works that I have heard. The idea of extremely slow movements did not please me aesthetically or technically. At the time, I preferred wild improvisations with a high pace of change and an especially high variety of sonic content packed into short compositions.
 
-This has changed when I have ran into works of Phill Niblock and La Monte Young. I realized that drone music needs its own time to be perceived properly. One could say it needs to induce some kind of a trance state, where person becomes hypnotized by the simplicity of the composition and sound. At that point, the subtle changes start to make sense and whole world of microscopic compositions and performances appears in front of the listener. Our ears (and brain) finally start to focus on the details, which as under magnifying glass, have liberty to become big movements, filled with spine-chilling realizations.
+My horizons were broadened when I heard the works of Phill Niblock and La Monte Young. I realized that drone music needs its own time to be perceived properly. One could say it needs to induce some kind of a trance state, where the listener becomes hypnotized by the simplicity of the composition and the sound. At that point, the subtle changes start to make sense and the whole world of microscopic compositions and performances appears in front of the listener. Our ears (and brain) finally start to focus in on the details, which as under a magnifying glass, have the liberty to become big movements, filled with spine-chilling realizations.
 
-In particular, I was heavily impressed by Phill Niblock's work, 22 minute long \emph{A Trombone Piece}, for trombone and tape machine. This piece works as a looper. There are possibly just 2 or 3 notes played (within interval of a second) during the whole work, yet it creates astoundingly heavy and dense atmosphere. Nothing really happens, just short breaks of the player for inhaling before upcoming blow. Sonologists may hear comb filtering occurring on overlaying trombone signals and frequency beating. Our perception, missing the regular level of stimulation starts to work differently and becomes more sensitive to slight details. My listening changes over the whole duration of the piece, from the regular alert position of a listener to meditative and contemplated state of mind. 
+In particular, I was extremely impressed by Phill Niblock's 22 minute long work, \emph{A Trombone Piece}, scored for trombone and tape machine. This piece works as a looper. There are possibly just 2 or 3 notes played (within an interval of a second) during the whole work, yet it creates an astoundingly heavy and dense atmosphere. Nothing really happens in the piece except for the obvious short breaks of the player's breath inhaling before the next upcoming blow. Sonologists may hear comb filtering occurring on overlaying trombone signals, as well as frequency beating (difference tones). Our perception, missing the regular level of stimulation, starts to work differently and becomes more sensitive to the slight details. My own listening changes over the whole duration of the piece, from the regular alert position of a listener to a more meditative and contemplative state of mind. 
 
 \subsection{Starting point}
 
-My work started at the point of musical hibernation. I was at that moment doing artistic residency at OKNO medialab in Brussels, dealing with my project --- designing open source modular gardening system. Most of the day surrounded by soldering iron and electronic components; working on some code. I was not communicating with many people during the day and my only companion was a computer (and social contacts accessible through it). It was a strange mental state, where I experienced many hours of silence and loneliness. I feel it is important to describe these conditions, because I believe they are very much reflected in the resulting work. 
+My own work started during my own musical hibernation. I was at that time doing a residency at OKNO medialab in Brussels, dealing with my project --- designing an open-source modular gardening system. Most of the day I was surrounded by the soldering iron and electronic components, or working on some code. I was not communicating with many people during the day and my only companion was a computer (and social contacts accessible through it). It was a strange mental state, where I experienced many hours of silence and loneliness. I feel it is important to describe these conditions, because I believe they are very much reflected in the resulting work. 
 
-I started composing one night. For me as sonologist, composing often means writing code. To elaborate, after four years at Institute of Sonology, I sometimes see myself as composer which have exchange five line staff with (five) lines of code --- writing algorithms is writing music to me. And that is what I was doing, writing line after line. It started very simply as few sine waves in specific relationships, slowly coming and leaving back, into the space. Bending their frequencies with almost momentary inaudible results, yet creating something special over the long run. I was immediately charmed by the two facts --- simplicity of the composition and the efficiency of such work. I started noticing subtle changes in my state of mind --- it was so delicate at first, but after letting my piece playing for longer time (10-20 minutes) I was falling into trance state where the sound would escape boundaries of its physical body. This experience was very frightening, but also very rewarding. I suddenly felt very powerful, in some way \emph{I was holding sound in my hands}. 
+I started composing one night. For me as a sonologist, composing often means writing code. To elaborate, after four years at the Institute of Sonology, I sometimes see myself as composer who has exchanged the standard five line staff with (five) lines of code --- writing algorithms is writing music to me. And that is what I was doing, writing line after line of code. It started very simply as a few sine waves in specific relationships to each other, slowly coming and going into the space. Bending their frequencies momentarily with almost inaudible results, yet creating something special over the long term. I was immediately charmed by two facts --- the simplicity of the composition and the efficiency of such work. I started noticing subtle changes in my state of mind --- it was so delicate at first, but after letting my piece play for longer periods of time (10-20 minutes), I was falling into a trance state where the sound would escape the boundaries of its physical body. This experience was at once very frightening, but also very rewarding. I suddenly felt very powerful, and in some way \emph{I was holding sound in my hands}. 
 
 \subsection{Binmatu}
 
-After some time, I have ended up with 4 core works. They all used sets of basic oscillators, modulated with other sets of slower oscillators. All frequencies are picked empirically, ``by ear'', based on their sonic impact. I already knew the theory of binaural beats and similar psychoacoustic effects, yet I decided not to use it consciously, but more in empiric fashion of testing and being the tested subject.
+After some time, I ended up with 4 core works. The pieces all used basic sets of oscillators which were modulated by other sets of slower oscillators. All frequencies were picked empirically, ``by ear'', based on their sonic impact. I already knew the theory of \emph{binaural beats} and similar psychoacoustic effects, yet I decided to not use those techniques consciously. Rather, I worked more in an empiric fashion of testing and being the test subject.
 
-In the first performances of this project, I have experimented with adding a my (heavily processed) vocal to the works, but it turned out as a dead end. My views on the whole concept of this particular performance has changed and crystalized into cleaner, minimalistic level. Vocal was redundant at this part, as I decided for a cold, digital and unstoppable feeling. Singing seemed too weak and pointless against the mass of heavy frequencies. 
+In the first performances of this project, I experimented with adding my (heavily processed) vocal to the works, but it turned out as a dead end. My views on the whole concept of this particular performance have changed and crystalized into a cleaner, minimalistic perspective. My vocal seemed redundant at this point, and I decided for a more cold, digital, and unstoppable feeling. Singing seemed too weak and somehow pointless against the heavy mass of frequencies. 
 
-At this point, I started to experiment with the strategy of infinite pieces. Something which can be easily faded in and out at any point of its existance and reach the same desired experience. Ongoing self-controlling drone, complex enough in its innards to maintain certain degree of non-repetitiveness (if possible in such genre). This idea is also present in my other works related to Binmatu, mentioned later. 
+At this point, I started to experiment with the strategy of infinite pieces. Something which could be easily faded in and out at any point of its existence and reach the same desired experience. I was looking for a perpetual self-controlling drone, complex enough in its innards to maintain a certain degree of non-repetitiveness (if possible in such a genre). This idea is also present in my other works related to Binmatu, which I mention in more detail later. 
 
-I started to orient more on a visual accompaniment to the sound works, since I have small experience in that field. During my listening sessions, I have over a few days programmed 4 visual compositions for each piece. The visuals were purposefully not directly connected to music, but strongly connected in conceptual sense. They represent very subtle changes and one needs to experience them for longer period of time to appreciate their potential. This effect is partly achieved by creating ``moiré'' from huge quantities of primitive shapes and lines. Final visual experience itself is then, in contrast to simplicity of its essential building blocks, quite complex. This particular effect might be found analogous to wave interactions, e.g.\ beating created by interaction of two sine waves with close frequencies. As plain lines, when placed closely enough and reduced in digital domain to pixels, create pulsating waves and circles due to aliasing, interacting frequencies create characteristic pulsation of third frequency born out of the collision of two waves. As in the musical part, changes are very slow. Some transitions even take duration of the whole piece to be noticeable.
+I also started to orient this project to have more of a visual accompaniment, since I have little experience in that field. During my listening sessions, I programmed 4 visual compositions for each piece. The visuals were purposefully not directly connected to music, but were strongly connected in a conceptual sense. They represent the very subtle changes in the music and one needs to experience them for a longer period of time to fully appreciate their potential. This effect is partly achieved by creating ``moiré'' from huge quantities of primitive shapes and lines. The final visual experience itself is then, in contrast to simplicity of its' essential building blocks, quite complex. This particular effect might be found analogous to sound wave interactions, e.g.\ the beating created by the interaction of two sine waves with close frequencies. Simple lines, when placed together close enough and reduced in the digital domain to pixels, create an effect of pulsating waves and circles due to aliasing, interacting frequencies create a characteristic pulsation of a third frequency born out of the collision of two waves. As it is in the musical component, changes in the video are very slow. Some transitions even take the duration of the whole piece to be noticeable.
 
 \begin{figure}  
   \centering
     \includegraphics[width=0.9\textwidth]{img/binmatu}
-	\caption{One of the Binmatu visuals}
-	\label{fig:binmatu}
+        \caption{One of the Binmatu visuals}
+        \label{fig:binmatu}
 \end{figure}
 
-From technical point of view, I am mainly using trigonometric functions for their rhythm and organic quality. These are fed with variables, which are growing over the period of the whole piece, resulting in certain form of repetitive behavior when fed to e.g.\ sine function and linear narrative when used as direct controls of the attributes. Use of the color is quite minimalistic, there is rarely more than 2 or 3 colors present.
+From a technical point of view, I am mainly using trigonometric functions for their rhythmic and organic qualities. These are fed with variables which are increasing over the period of the whole piece, and that results in a certain form of repetitive behavior when fed to e.g.\ sine function and linear narrative when used as direct controls of the attributes. The use of color is quite minimalist, as there are rarely more than 2 or 3 colors present at any given time.
 
-After few performances in Belgium, Czech Republic, Poland and Slovakia I was asked to create a new set for performing at NEXT festival in Slovakia. I have composed 9 new works and 9 new visuals in similar manner as the previous ones. There appeared a slight shift towards other psychoacoustic effects, from binaural beats (as in first works) towards Haas effect and other space illusions.
+After a few performances in Belgium, Czech Republic, Poland, and Slovakia, I was asked to create a new set for performing at the NEXT festival in Slovakia. I composed 9 new works and 9 new visuals in a similar manner to the previous ones. However, this time there appeared to be a slight shift towards other psychoacoustic effects- from binaural beats (as in the first works) towards the Haas effect and other spatial illusions.
 
-One particular composition is based around time delayed pulses, where the length of the delay is gradually shifted over the time by small steps. I have achieved this with setting up two separate pulses (one in each channel), with slight difference in frequency. I have calculated the difference in a way, that the pulses come to the temporary synchronization every 4 minutes (which is constant length of my works in this project). Use of pulses brings another spatial effect, that being impulse response of the space. Frequency of the pulses gives sufficient time (142 milliseconds) for revealing the natural resonances and reverberations of the space. One can also perceive compressor-like behavior of the ear, which brings (in audio engineering slang, ``pumps'') more delicate sounds up between each pulse.
+One composition in particular is based around time-delayed pulses, where the length of the delay is gradually shifted over time by small steps. I achieved this by setting up two separate pulses (one in each channel), with slight differences in frequency. I calculated the difference in a way that the pulses come to temporary synchronization every 4 minutes (which is the consistent length of my works in this project). The use of pulses brings about another spatial effect- the impulse response of a space. The frequency of the pulses (142 milliseconds) gives sufficient time for revealing the natural resonances and reverberations of any given space. One can also perceive a compressor-like behavior of the ear, which brings (in audio engineering slang, ``pumps'') more delicate sounds more to the front between each pulse.
 
-\subsection{Selected performances and installations} In this section, I would like to describe and evaluate some of Binmatu performances and installations. From performances, I have selected two most recent ones, quite different from each other, providing sufficient ground for comparisons. 
+\subsection{Selected performances and installations} In this section, I would like to describe and evaluate some of the Binmatu performances and installations. From performances, I have selected the two most recent ones, which are quite different from each other, and that should provide sufficient ground for comparisons. 
 
-First was performance in Studio Loos in The Hague during one of the \emph{Ephémère} evenings organized by Marie Guilleray. This event consisted from quite different performances, from experimental amateur vocal performances of graphical scores (Genetic choir \& Tanja Smit) to pop songs of Kathrin Grenzdörffer and her project \emph{Glanzkoffer}. Binmatu was scheduled last, which was from my experience a good decision. Unfortunately, by the time of the performance, big part of the audience left due to the late hour. Since Loos offers quad-speaker setup, I decided to use it for my work, by mapping front channels to rear in reverse. During my soundcheck I have prepared the speakers in traditional symmetric fashion, but over the night I noticed that listeners have chosen rather untraditional positions in the space, so I improvised and modified the directions of the rear speakers to cover sides of the small room rather than the center (which was already covered by front speakers). I was expecting a lot of interactions, comb filtering, reverb and other acousticians nightmares. Not being an acoustician, I personally enjoy these effects very much and they have became an inspiration for further works and installations. 
+The first was a performance in Studio Loos in The Hague during one of the \emph{Ephémère} evenings organized by Marie Guilleray. This event consisted of a stylistic array of performances- from experimental amateur vocal performances of graphic scores (Genetic choir \& Tanja Smit) to the pop songs of Kathrin Grenzdörffer and her project \emph{Glanzkoffer}. Binmatu was scheduled to perform last, which was (from my experiences), a good decision. Unfortunately, by the time of my performance, a large part of the audience had left due to the late hour. Since Studio Loos offers a quadraphonic speaker setup, I decided to use it for my work by mapping the front channels to rear in reverse. During my soundcheck I prepared the speakers in a more traditional symmetrical fashion, but over the course of the night I noticed that the listeners had chosen rather untraditional listening positions in the space, so I improvised and modified the directions of the rear speakers to cover the sides of the small room rather than the center (which was already covered by the front speakers). I was expecting a lot of acoustic interactions such as comb filtering, reverb, and other acoustician's nightmares. Not being an acoustician, I personally enjoyed these effects very much and they became an inspiration for further works and installations.
 
-As expected, sound was behaving oddly and quickly conquered the whole room. Judging from the point of a performer (partly out of the system), transients were completely lost in the reflections and reverb. Presence of the low frequencies was slightly lower, but as I said, I was happy with all the imperfections and acoustic errors of the space, because they served my purposes well.
+As expected, the sound was behaving strangely and quickly conquered the whole room. Judging from the perspective of a performer (who is partly out of the system), the transients were completely lost in the reflections and the reverb. The presence of the low frequencies was also slightly lower, but as I said, I was happy with all the imperfections and acoustic errors of the space, because they served my purposes, as they enhanced my work.
 
-Second event I want to mention, contrasting to small studio performance, was \emph{Sonology Discussion Concert} presented in Arnold Schoenbergzaal of Royal Conservatory in The Hague. Arnold Schoenbergzall is spacious concert hall designed for larger events of various genres of music. For my years at Sonology, it has been a home to most of Sonology concerts. It was a special moment for me to finally present my work in such place and I treated it with adequate dignity.
+The second event I would like to mention, contrasting to the small studio performance, was the \emph{Sonology Discussion Concert} presented in the Arnold Schoenbergzaal of The Royal Conservatory in The Hague. Arnold Schoenbergzall is a spacious concert hall designed for larger events of various genres of music. In all of my years at the Sonology department, it has been the home to most of the Sonology concerts. It was a special moment for me to finally present my work in such a place and I treated it with adequate dignity.
 
 \begin{figure}  
   \centering
     \includegraphics[width=0.9\textwidth]{img/binmatu_perfo}
-	\caption{Binmatu performance in Studio Loos}
-	\label{fig:binmatu_perfo}
+        \caption{Binmatu performance in Studio Loos}
+        \label{fig:binmatu_perfo}
 \end{figure}
 
-I have, once again, benefited from quad-speaker setup, and this time the order of rear speakers was not reversed. It has been quite successful in its realization. There were some minor disturbances with distortion of the speakers / mixing console at few points, but in the end I was satisfied with results. Hall provided sufficient ground for the grandiosity of certain pieces, and previously described `impulse' piece had enormous impact because of the natural reverberation, which have not smothered transients, yet allowed blossoming of impulse responses.
+I have, once again, benefited from a quadraphonic speaker setup, and this time the order the of rear speakers was not reversed. It was quite successful in its realization. There were some minor disturbances with distortion in the speakers and/or mixing console at a few points, but in the end I was satisfied with the results. The hall provided a sufficient ground for the grandiosity of certain pieces, and the previously described `impulse' piece had an enormous impact because of the natural reverberation, which did not smother the transients, yet allowed the blossoming of the impulse responses.
 
 \subsection{Conclusion}
 
-Binmatu is still an ongoing project. Over the course of a year and a half, it has developed from uncertain coasts of self-searching vocal performance to clean and direct \emph{digitalism}. I still see myself with lack of expertise in performative aspect of the performance. I feel I need to research more artworks dealing with combining music and spiritual experiences, ways of reaching deep into human mind (further than simple emotions) through medium of sound. 
+Binmatu will be an ongoing project. Over the course of a year and a half, it has progressed from the uncertain coasts of a self-searching vocal performance to a clean and direct \emph{digitalism}. I still see myself as having a lack of expertise in the performative aspect of this music. I feel that I need to research more artwork that deals with the combination of music and spiritual experiences; ways of reaching deep into human mind (further than simple emotions) through the medium of sound. 
 
-After one of the performances, one composer studying classical composition in Bratislava, Slovakia came to me and said that he had very strange experience. He told me, that he has ``been places and remembered things which he believed were long forgotten''. I view it as a beautiful compliment, especially, because at that point I knew I am not alone who perceives the psyche-delic (I choose to divide this word to embrace its original meaning) energy stored within these simple sounds. Other compliment I want to point out was from a girl, which pronounced, that she was not able to focus on any music after my performance. It worked as some kind of special spell which simply did not let her to concentrate and listen during the rest of festival. I found it quite beautiful, I was astonished that my pieces can reach such levels of impact. How far can I possibly reach?
+After one of the Binmatu performances, a composer studying classical composition in Slovakia had a very strange experience. He told me that he had ``been places and remembered things which he believed were long forgotten''. I view this as a beautiful compliment, especially because at that point I knew I wasn't alone in perceiving the psyche-delic (I choose to divide this word to embrace its original meaning) energy stored within these simple sounds. The other compliment that I want to relate was from a girl who said that she was not able to focus on any other music after my performance. My music had worked some kind of special spell which simply did not let her concentrate during the rest of festival. I found this quite beautiful, and I was astonished that my pieces could reach such a level of impact. How far can I possibly reach?
 
-For the future, I see myself starting to work with Binmatu installations as well. Effort to transform my performance into infinite streams of sound and visuals. Embracing the site-specificity --- use of the acoustic properties of spaces, illusions, use of present objects as speakers with use of tactile transducers.
+For the future, I see myself starting to work on Binmatu installations as well. It will be an effort to transform my performance into infinite streams of sound and visuals, embracing the site-specificity --- using the acoustic properties of space, illusion, and utilizing resonating objects as speakers through the use of tactile transducers.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Phasolume} Phasolume is an audiovisual installation that I've authored in collaboration with Agnes Szelag.
+\section{Phasolume} Phasolume is an audio-visual installation that I co-authored in collaboration with Agnes Szelag.
 
 \subsection{Introduction} 
 
-For the scholastic year of 2011/12 I was an Erasmus exchange student at the Academy of Music in Cracow. This visit resulted in a few different collaborations. One of my main collaborators was Agnes Szelag, who was on a Fulbright residency at the Academy at the same time.  Agnes Szelag is a Polish-American sound artist, performer, composer, and educator. She has performed and presented her work in festivals around USA and Europe. She has also authored various audio-visual installations in galleries, museums, and site-specific locations. She received her Master’s Degree from Mills College in Oakland, California.
+During the scholastic year of 2011/2012, I was an Erasmus exchange student at the Academy of Music in Kraków. This visit resulted in a few different collaborations. One of my main collaborators was Agnes Szelag, who was on a Fulbright residency at the Academy at the same time.  Agnes is a Polish-American sound artist, performer, composer, and educator. She has performed and presented her work in festivals around the U.S.A. and Europe. She has also authored various audio-visual installations in galleries, museums, and site-specific locations. She received her Master’s Degree in Electronic Music from Mills College in Oakland, California.
 
-At the beginning of the year, Szelag started a group called Krakow Active Ensemble, which connected various musicians from the conservatory into one unifying experience of free improvisation and graphical scores. For my part, I mostly used my own software programmed in Max - JONO. The ensemble performed at various galleries, electroacoustic events, and open jam sessions.
+At the beginning of the year, Szelag started a group called the ``Kraków Active Ensemble'', which connected various musicians from the conservatory into a unifying experience of free improvisation and graphic scores. For my part in the group, I mostly used my own software that I had programmed in Max, which I named ``JONO''. The ensemble performed at various galleries, electroacoustic events, and open jam sessions.
 
-In the beginning of 2012, Agnes and I decided to collaborate on a sound based installation. We both created work in this field before, but our projects and experiences were very different, and it would be interesting to see how things would come together.  We decided my main role would be dealing with technical elements, and hers would be working with aesthetic and the overall design concept.
+In the beginning of 2012, Agnes and I decided to collaborate on a sound-based installation. We had both created work in this field before, but our projects and experiences were very different, so it would be interesting to see how things would come together.  We decided that my main role would be in dealing with the technical elements, and her role would be in working with the aesthetic and overall design concept.
 
 \subsection{Working process} 
 
-The root of our idea was to imitate organic behavior and process observed in nature using sound and light.  We believed, that such methods, when used correctly, could relate to some specific parts of our aesthetic appreciation. Initially we wanted to place our installation permanently in an abandoned building, but after some research and brainstorming, we changed the plan to create and present the installation directly in my apartment. I had an extra, unfurnished room and it became an ideal environment for working and presenting.  It is not very often that one has the opportunity to work on site-based installation without time or space constraints.
+The root of our idea was to imitate organic behavior and processes observed in nature using sound and light.  We felt that such methods, when used correctly, could relate to some specific parts of our own aesthetic appreciations. Initially, we wanted to permanently place our installation in an abandoned building, but after some research and brainstorming, we changed the plan to create and present the installation directly in my apartment. I had an extra, unfurnished room and it became an ideal environment for working and presenting.  It doesn't often seem to be the case that one has the opportunity to work on a site-based installation without time or space constraints.
 
-By the end of March, we slowly started to shape a concrete idea and form specifics of the project. We decided to focus on Fireflies (\emph{Lampyris noctiluca}) and their rhythmic and synchronizing behavior. We did not wanted to make an exact simulation, but rather to recreate an atmosphere or feeling.  For this purpose, we developed little electronic insects - robots, built from LEDs and vibration motors. Vibration motors were removed from broken cellphones our friends donated to us.
+By the end of March, we had slowly started to shape a concrete idea and form the specifics of the project. We decided to focus on fireflies (\emph{Lampyris noctiluca}) and their rhythmic and synchronous behavior. We did not set out to make an exact simulation, but rather to recreate an atmosphere of fireflies.  For this purpose, we developed little electronic insects - robots, built from LEDs and vibration motors. The vibration motors were recycled from broken cellphones our friends donated to us.
 
-The main concept became to insert these 10 little robots into various jars in a way, that they hit the glass with their bodies when turned on. This resulted in very cricket-like sound, since the vibration motors behave like wings of an insect, especially when turned on in short (one or two second) bursts. This triggered our inspiration and we started to create various sequences with the computer and Arduino board. Using a sequencing patch I specially made for this purpose, we were able to work with these robots as with any other MIDI instrument.
+The main concept became to insert these 10 little robots into various glass jars in a way that they hit the glass with their ``bodies'' when turned on. This resulted in a very cricket-like sound, since the vibration motors behave like the wings of an insect, especially when turned on in short (one or two second) bursts. This triggered our inspiration and we started to create various sequences with the computer and an Arduino board. Using a sequencing patch I made specifically for this purpose, we were able to work with these robots as with any other MIDI instrument.
 
 \begin{figure}  
   \centering
     \includegraphics[width=0.9\textwidth]{img/phasolume}
-	\caption{Custom designed circuit for Phasolume}
-	\label{fig:phasolume}
+        \caption{Custom designed circuit for Phasolume}
+        \label{fig:phasolume}
 \end{figure}
 
-An important detail to note was that in the end, the whole system was running without a normal computer, but instead from a circuit I designed specifically for this process (see~\ref{fig:phasolume}). This made it possible to make the core of the installation very small, transportable, and easy to operate.
+An important detail to note was that in the end, the whole system was running without a traditional computer, but instead from a circuit that I designed specifically for this process (see~\ref{fig:phasolume}). This made it possible for the core of the installation to be very small, transportable, and easy to operate.
 
 \subsection{Concept and execution}
 
-After the more technical part was finished, we started to focus on the sequencing and general aesthetics of the installation.  We abandoned our initial idea of using preprogrammed (or pre-composed) sequences and started to think more about creating a generative algorithm for the system.
+After the more technical part of the installation was finished, we started to focus on the sequencing and general aesthetics of the installation.  We abandoned our initial idea of using a pre-programmed (or pre-composed) sequence and started to think more about creating a generative algorithm for the system.
 
-The first algorithm idea was to create a set of metronomes controlling the rhythm of robots, similarly to Ligeti’s \emph{Poème symphonique}. In this scenario, there is one metronome per robot with a slightly higher (increments were equal) tempo than the previous, e.g.\ there could be one with tempo of 60, other with 64, next one with 68 and so on. We wanted to create a situation in which the insects would start in sync, then slowly disperse into variations, and eventually return to a sync. After I did some calculations, I concluded that it would be impossible to keep a slow sync start and realize a reasonable time for the whole cycle (from sync to sync). According to my calculations the cycle length would range from tens of hours to hundreds of days. The participant’s perception of synchronization was at the core of our concept, so we decided to create artificial resets – resynchronizations - so that a participant could experience a few during their visit. During resynchronization, a new set of tempos is picked from the database and the whole sequence would start again.
+The first algorithmic idea was to create a set of metronomes controlling the rhythms of robots in a fashion similar to Ligeti’s \emph{Poème symphonique}. In this scenario, there would be one metronome per robot with a slightly higher (in linear increments) tempo than the previous, e.g.\ there would be one with a tempo of 60 BPM, the next with 64, the next with 68, and so on. We wanted to create a situation in which the insects would start in sync with each other, then slowly disperse into variations, and eventually return to a sync. After I did some calculations, I concluded that it would be impossible to keep a slow sync start and realize a reasonable length for the whole cycle (from sync to sync). According to my calculations, the cycle length would range from tens of hours to hundreds of days. The participant’s perception of synchronization was at the core of our concept, so we decided to create artificial resets – resynchronizations - so that a participant could experience a few during their visit (generally 5-10 minutes of active observation per person). During resynchronization, a new set of tempos would be picked from the database and the whole sequence would start again.
 
-The whole installation was set up, as mentioned, in my apartment with the power core of the system installed in the ceiling instead of a lamp. I replaced the lamp with an electricity socket, so it was possible to turn on the whole installation just by regular light switch.
+The whole installation was set up (as mentioned) in my apartment with the power core of the system installed in the ceiling instead of a lamp. I replaced the lamp with an electrical socket, so in the end it was possible to turn on the whole installation just by flipping a standard light switch.
 
 \subsection{Exhibition}
 
-After a successful exhibition at my apartment (and slight problems with the po- lice), we were invited to present the installation at Krakers. Krakers is a yearly event happening in Cracow, dedicated to presenting little art collectives in mostly home galleries. I setup the installation in another apartment and all together it was visited by more than 250 people. Many people stayed with the installation for longer periods of time, simply enjoying the patterns emerging from the desynchronicity of this metronomic behavior.
+After a successful exhibition at my apartment (and only slight problems with the police), we were invited to present the installation at Krakers. Krakers is a yearly event happening in Kraków which is dedicated to presenting small art collectives in mostly home galleries. I set up the installation in another apartment and all together it was visited by more than 250 people. During the second installation, many people stayed with it for longer periods of time, simply enjoying the patterns emerging from the desynchronicity of the metronomic behavior.
 
 \subsection{Conclusion}
 
-I really enjoyed this form of work as well as collaboration with an artist who came from such a different background and context. I believe it resulted in fruitful combination of technical and aesthetic world and helped me with my own personal attitude towards creating public works of this kind.
+I really enjoyed this method of working, as well as the collaboration with an artist who came from such a different background and context. I believe it resulted in a fruitful combination of technical and aesthetic worlds and helped me with my own personal attitude towards creating more public works of this kind in the future.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -444,84 +440,85 @@ I really enjoyed this form of work as well as collaboration with an artist who c
 
 \subsection{Introduction}
 
-\emph{Site specific resonances} was my latest project during the period of writing of this thesis. It was a sound installation exhibited in Vrije Academie Gemak in The Hague.
+\emph{Site specific resonances} was my latest project during the period of writing of this thesis. It was a sound installation exhibited in the Vrije Academie Gemak in The Hague.
 
-The project had started by my proposal to the gallery for creating a site-specific sound installation. My aim was to do a research on few topics, close to my aesthetics --- minimalism, hidden technology and reusing / repurposing of materials. It ended up quite differently --- instead of a permanent installation, I have built a special environment to perform with. 
+The project started with my proposal to the gallery for creating a site-specific sound installation. My aim was to research a few topics close to my aesthetics --- minimalism, hidden technology, and the reusing/repurposing of materials. In the end, it turned out quite differently --- instead of creating a permanent installation, I built a special environment to perform with. 
 
-I see the project as somewhat continuation of my Binmatu project, where I am focusing on drones and subtle psychoacoustic effects, hidden in the compositions.
+I see this project as something of a continuation of my Binmatu project, where I am focusing on drones and subtle psychoacoustic effects hidden in the compositions.
 
-I have decided to work with resonant frequencies of the space. By measuring the room properties with measurement microphone and impulse response I have extracted the most resonant frequencies and started composing.
+For this installation, I decided to work with the resonant frequencies of the space. By measuring the room acoustics with a measurement microphone and an impulse response, I extracted the most resonant frequencies and began composing.
 
 \subsection{Technical aspects}
 
-It is important to mention, that I have decided (as part of the minimalistic aesthetics) not to use regular speakers. I see them as somehow distracting elements. And, the method I have used instead --- tactile transducers --- worked much better visually, and sonically.
-
-Tactile transducers are basically moving coils (like ones in the speaker), but without the speaker cone. They can be attached to any object, which has at least a bit moving body. Tactile transducers utilize the body as a speaker cone, and in a result, the object becomes a speaker. 
-
-This of course brings many interesting aspects to the newly created sound emitter. Mainly, it is inheriting the acoustic imperfections of the object. E.g.\ metallic plate resonates at certain frequencies and presents a long reverb (such as in plate reverb). I have exercised this greatly in my project.
-
-Firstly, I have acquired various interesting objects which were laying around in the workshop of the gallery --- two metallic plates and one empty oil barrel. Then I created three different `stages', three different sound emitting objects. Two of those were connected to one amplifier and then to my computer, and one stage was totally separate from the main computer. To achieve this visual separation --- no cables running through the space. This was important to me, since I often find cables distracting in visual domain. My goal was element of surprise, perception of the object as truly autonomous sound emitting unit. To accomplish that, I have used few different technologies I had on hand. Sound was generated from microcomputer Raspberry Pi running sound programming language Chuck. This audio was than fed to small amplifier and finally to the object (to the transducer connected to it). For better understanding, I have created figure~\ref{fig:sitespec}.
+It is important to mention that I decided (as part of the minimalist aesthetics) not to use traditional speakers. I see them as somehow distracting elements. In addition, the method I used instead --- tactile transducers --- worked much better visually and sonically.
 
 \begin{figure}  
   \centering
-		\tikzstyle{block} = [rectangle, draw, 
-		    text width=7em, text centered, minimum height=2.5em, node distance=3cm,
-			%top color=white, % a shading that is white at the top...
-			%bottom color=black!10,
-			rounded corners=2pt] % and something else at the bottom]
-		\tikzstyle{line} = [draw, -triangle 90, rounded corners=5pt]
+                \tikzstyle{block} = [rectangle, draw, 
+                    text width=7em, text centered, minimum height=2.5em, node distance=3cm,
+                        %top color=white, % a shading that is white at the top...
+                        %bottom color=black!10,
+                        rounded corners=2pt] % and something else at the bottom]
+                \tikzstyle{line} = [draw, -triangle 90, rounded corners=5pt]
 
 
-		\begin{tikzpicture}[node distance = 2cm, auto]
-		    % Place nodes
-		    \node [block] (me) {\textbf{Me} \\ (Performer)};
-			\node [block, below of=me, xshift=-5em, node distance=3.6cm] (raspi) {Raspberry Pi \\ running ChucK};
-			\node [block, below of=me, xshift=5em, node distance=2.5cm] (amp1) {Amplifier 2};
-			\node [block, below of=raspi, node distance=2.8cm] (amp2) {Amplifier 1};
-			\node [block, below of=amp1, node distance=2cm] (trans1) {Transducer 2};
-			\node [block, below of=amp1, node distance=2cm, xshift=10em] (trans2) {Transducer 3};
-			\node [block, below of=amp2, node distance=2cm] (trans3) {Transducer 1};
+                \begin{tikzpicture}[node distance = 2cm, auto]
+                    % Place nodes
+                    \node [block] (me) {\textbf{Me} \\ (Performer)};
+                        \node [block, below of=me, xshift=-5em, node distance=3.6cm] (raspi) {Raspberry Pi \\ running ChucK};
+                        \node [block, below of=me, xshift=5em, node distance=2.5cm] (amp1) {Amplifier 2};
+                        \node [block, below of=raspi, node distance=2.8cm] (amp2) {Amplifier 1};
+                        \node [block, below of=amp1, node distance=1.8cm] (trans1) {Transducer 2};
+                        \node [block, below of=amp1, node distance=1.8cm, xshift=10em] (trans2) {Transducer 3};
+                        \node [block, below of=amp2, node distance=1.8cm] (trans3) {Transducer 1};
 
-		    % Draw edges
-		    \path [line, dashed] (me) -| node [near end, above, scale=.8, rotate=90, align=center, text centered, text width=3cm] {wireless \\ remote control} (raspi);
-			\path [line] (me) -| node [near end, below, scale=.8, rotate=90] {audio} (amp1);
-			\path [line] (raspi) -- node [above, scale=.8, rotate=90] {audio} (amp2);
-			\path [line] (amp1) -- (trans1);
-			\path [line] (amp1) -| (trans2);
-			\path [line] (amp2) -- (trans3);
+                    % Draw edges
+                    \path [line, dashed] (me) -| node [near end, above, scale=.8, rotate=90, align=center, text centered, text width=3cm] {wireless \\ remote control} (raspi);
+                        \path [line] (me) -| node [near end, below, scale=.8, rotate=90] {audio} (amp1);
+                        \path [line] (raspi) -- node [above, scale=.8, rotate=90] {audio} (amp2);
+                        \path [line] (amp1) -- (trans1);
+                        \path [line] (amp1) -| (trans2);
+                        \path [line] (amp2) -- (trans3);
 
-			\begin{scope}[on background layer]
-			    \node[fill=lightgray!50,inner sep = 3mm,fit=(trans1),label=below:Metallic Plate 2] {}; 
-				\node[fill=lightgray!50,inner sep = 3mm,fit=(trans2),label=below:Oil barrel] {}; 
-				\node[fill=lightgray!50,inner sep = 3mm,fit=(trans3),label=below:Metallic Plate 1] {};
-			\end{scope}
+                        \begin{scope}[on background layer]
+                            \node[fill=lightgray!50,inner sep = 3mm,fit=(trans1),label=below:Metallic Plate 2] {}; 
+                                \node[fill=lightgray!50,inner sep = 3mm,fit=(trans2),label=below:Oil barrel] {}; 
+                                \node[fill=lightgray!50,inner sep = 3mm,fit=(trans3),label=below:Metallic Plate 1] {};
+                        \end{scope}
 
-	\end{tikzpicture}
-	\caption{System of \emph{Site specific resonances} installation}
-	\label{fig:sitespec}
+        \end{tikzpicture}
+        \caption{System of \emph{Site specific resonances} installation}
+        \label{fig:sitespec}
 \end{figure}
 
-This solution gave me opportunity to have full control over what was happening in the room sound wise, without need for a jungle of wires and multichannel sound cards. It became especially important, when my work in the gallery became more focused on performing with the objects rather than creating an standalone self-sustaining installation.
 
-Visually, the installation was very minimalistic --- bare metallic plates emitting sound and one rambling oil can, shaking in a fearful drone. I personally find something very intriguing about simple metallic objects in space, especially when standing on their own, simple and raw in their full glory. They are like simple and understandable statements in a book yet they offer few different viewpoints.
+Tactile transducers are basically moving magnetic coils (like the ones found in any speaker), but without the speaker cone. They can be attached to any object which has a vibrate-able body. Tactile transducers utilize the body of the object as a speaker cone and in result, the object then becomes a speaker. 
+
+This, of course, brings many interesting aspects to the newly-created sound emitter. Primarily, it is inheriting the acoustic imperfections of the object. E.g.\ a metallic plate resonates at certain frequencies and presents a long reverb (such as is found in plate reverb). I have exercised this concept greatly in my project.
+
+First, I acquired various interesting objects which were lying around the workshop of the gallery --- two metallic plates and one empty oil barrel. Then I created three different `stages', three different sound emitting objects. Two of those were connected to one amplifier and then to my computer, and one stage was totally separate from the main computer. To achieve this visual separation --- no cables running through the space. This was important to me, since I often find cables visually distracting. My goal was the element of surprise, the perception of the object as a truly autonomous sound-emitting unit. To accomplish that, I used a few different technologies that I had on hand. The sounds were generated from a Raspberry Pi microcomputer running the sound programming language Chuck. This audio was than fed to a small amplifier and finally to the object (or rather, to the transducer connected to it). For a better visualization of this concept, I have created figure~\ref{fig:sitespec}.
+
+This solution gave me the opportunity to have total control over what was happening in the room sound-wise, without the need for a jungle of wires and multichannel sound cards. It became especially important when my work in the gallery became more focused on performing with the objects rather than creating a standalone self-sustaining installation.
+
+Visually, the installation looked very minimalist --- bare metallic plates emitting sound and one rambling oil can, shaking in a fearful drone. I personally find something very intriguing about simple metallic objects in space, especially when standing on their own; simple and raw in their full glory. They are like simple and understandable statements in a book, yet they offer a few different perspectives.
 
 \subsection{Performances}
 
-I have performed with the installation 5 times, for various groups of people. First performances were happening during Hoogtij event, which turned out to be unfortunate. The crowds and delicate sound installations simply do not come together as a good match, and I had to ask people to be quite many times to make my work audible. Luckily the last three performances after unsuccessful two went quite successfully, one even turned out having a very positive review at local art blog \cite{jegen}.
+I have performed with the tactile transducers a total of 5 times for various groups of people. The first performances were happening during the Hoogtij event which turned out to be quite unfortunate. The nature of the Hoogtij crowds and the delicate sound installation simply did not come together as a good match, as I had to ask people to be quiet many times to make my work audible. Luckily, the last three performances (after the first two unsuccessful performances) went quite well, and one even turned out to get a very positive review on a local art blog \cite{jegen}.
 
 \subsection{Conclusion and future}
 
-Clear message coming from presentation of these works is to prepare the audience as much as possible for what is being presented, otherwise the subtle details, which I base my work on, go unnoticed, unexperienced --- worthless.
+The clear message coming from the presentation of these works is to prepare the audience as much as possible for what is being presented. Otherwise, the subtle details which I base my work on go unnoticed and unexperienced, and in the end become worthless.
 
-This project gave me a lot of inspiration for further works, and I have been asked by the director of the gallery to come again to create something new for their spaces.
+This project gave me a lot of inspiration for future works, and I have already been asked by the director of the gallery to create something new for their space.
 
-I have actually quite enjoyed the concept of creating installation as a system for performance, performing on non traditional setups sets beautiful atmosphere to the work and creates very different listening situation from the one we all know. 
+I have actually quite enjoyed the concept of creating an installation which serves as a system for performance, and performing on non-traditional setups gives a beautiful atmosphere to the work and creates a very different listening situation from the one we all know. 
 
 \begin{figure}  
   \centering
     \includegraphics[width=0.8\textwidth]{img/sitespec}
-	\caption{Site specific resonances performance}
-	\label{fig:sitespec}
+        \caption{Site specific resonances performance}
+        \label{fig:sitespec}
 \end{figure}
 
 \chapter{Conclusion}
