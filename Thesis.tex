@@ -5,6 +5,13 @@
 %\setulmarginsandblock{2cm}{2cm}{*}
 %\checkandfixthelayout
 
+\usepackage[pdftex,
+            pdfauthor={Jonáš Gruska},
+            pdftitle={Streams & Currents},
+            pdfsubject={Wireless Network Sonification and other works},
+            pdfkeywords={sonification, wireless networks, soundart, installations},
+            pdfproducer={LaTeX with hyperref},
+            pdfcreator={pdflatex}]{hyperref}
 
 \usepackage[utf8]{inputenc} 
 \usepackage{xcolor}
@@ -31,6 +38,7 @@ filecolor=red
 \usepackage{float}
 \usepackage{setspace}
 \usepackage{anyfontsize}
+
 
 \onehalfspacing
 \usepackage{tikz}
@@ -110,11 +118,11 @@ Use of streams of data for compositional and sound generating purposes is very f
 
 To give some real world examples, I would like to point out few significant works which use sonification as its main concept or method, and while doing so, I will try to exercise my proposal for the new sonification definition division.
 
-One of the most classic examples of sonification is the \emph{Geiger} (or \emph{Geiger–Müller}) \emph{counter} particle detector which measures ionizing radiation. This tool is known for its direct connection between environmental value (in this case, radiation) and sound, and is one of the most known sonification tools. Technically, the method of auditory display of the information is the use of pulses---representations of electrical charges (and consequential discharges) of the inert gas in the Geiger–Müller tube caused by particles or photons of the radiation. Higher amount of electrical discharges (which translated into a higher number of audio pulses coming from the speakers) signals a greater density of particles of the radiation, thus higher radiation in the environment~\cite{Knoll2010}. A Geiger counter is clearly an \emph{analytical} sonification tool, with its main purpose being the representation of certain information, rather than using the information as an artistic basis.
+One of the most classic examples of sonification is the \emph{Geiger} (or \emph{Geiger-Müller}) \emph{counter} particle detector which measures ionizing radiation. This tool is known for its direct connection between environmental value (in this case, radiation) and sound, and is one of the most known sonification tools. Technically, the method of auditory display of the information is the use of pulses---representations of electrical charges (and consequential discharges) of the inert gas in the {Geiger}-{Müller} tube caused by particles or photons of the radiation. Higher amount of electrical discharges (which translated into a higher number of audio pulses coming from the speakers) signals a greater density of particles of the radiation, thus higher radiation in the environment~\cite{Knoll2010}. A Geiger counter is clearly an \emph{analytical} sonification tool, with its main purpose being the representation of certain information, rather than using the information as an artistic basis.
 
 I have chosen the Geiger counter for another reason, apart from it simply being the ideal representation of scientific and analytic attitude towards sonification. It is also a standalone and portable instrument. This opens up a possibility for its artistic use, even though its design is serving purely for research purposes. As I suggest later on in subsection discussing my wireless sonification project, I find interest in portable sonification tools for various environmental experiments. These tools can be used as an immediate instruments, serving artists with unconventional musical experience of the data \emph{in situ}.  
 
-Geiger counter can be also viewed as representation of a sub-method of sonification, \emph{audification}. To quote the Sonification Handbook,  \emph{``audification is a technique of making sense of data by interpreting any kind of one-dimensional signal (or of a two-dimensional signal-like data set) as amplitude over time and playing it back on a loudspeaker for the purpose of listening.''}~\cite[p.~301]{audif}
+Geiger counter can be also viewed as representation of a sub-method of sonification, \emph{audification}. To quote the Sonification Handbook,  \emph{``audification is a technique of making sense of data by interpreting any kind of one-dimensional signal (or of a two-dimensional signal-like data set) as amplitude over time and playing it back on a loudspeaker for the purpose of listening''}~\cite[p.~301]{audif}.
 
 Audification is sonification simplified to the most basic level. The majority of the common real-time sonifications are then audifications as well, e.g.\ listening to the whale songs or bat echolocation, where the only transformations which happen on the data are changes of the playback speed.
 
@@ -143,9 +151,9 @@ Chinen makes an excellent point for an artistic stand towards sonification. The 
 
 His work is representative and direct, yet its main point is not to convey information. Auditory display becomes `useless' from scientific or research point of view and becomes interesting as an artwork for its specific aesthetics.
 
-Chinen's work has been strongly connected to the Institute for Algorhytmics, led by Shintaro Miyazaki. He is a post-doctoral researcher at Humboldt University in Berlin dealing with \emph{``epistemology, archeology, history and theory of everyday technologies, which store, transmit and process informations and their dynamic relation to sound, rhythms and other sorts of time-varying signals.''}~\cite{Miyazaki2012}. From his projects, I want to point out his collaboration with Martin Howse~\cite{howse} called \textbf{Detektors}.
+Chinen's work has been strongly connected to the Institute for Algorhytmics, led by Shintaro Miyazaki. He is a post-doctoral researcher at Humboldt University in Berlin dealing with \emph{``epistemology, archeology, history and theory of everyday technologies, which store, transmit and process informations and their dynamic relation to sound, rhythms and other sorts of time-varying signals''}~\cite{Miyazaki2012}. From his projects, I want to point out his collaboration with Martin Howse~\cite{howse} called \textbf{Detektors}.
 
-Detektors is \emph{``an open, collaborative project which uses sonic strategies and DIY-devices to make audible the hidden infoscapes of our time. The present website will show data, recordings and cartographies of different spectral ecologies and trans-sonic machinic agencements.''}~\cite{detektors}. The website of the project contains many sound recordings of the electromagnetic fields (audifications) from radio-frequency range as well as cartographic information about such sources. It is a study of the electromagnetic pollution, sonic behavior of digital devices in the context of a geolocational sound recordings.
+Detektors is \emph{``an open, collaborative project which uses sonic strategies and DIY-devices to make audible the hidden infoscapes of our time. The present website will show data, recordings and cartographies of different spectral ecologies and trans-sonic machinic agencements''}~\cite{detektors}. The website of the project contains many sound recordings of the electromagnetic fields (audifications) from radio-frequency range as well as cartographic information about such sources. It is a study of the electromagnetic pollution, sonic behavior of digital devices in the context of a geolocational sound recordings.
 
 \begin{figure}  
   \centering
@@ -162,9 +170,9 @@ My Wireless Network Sonification work is strongly related to that concept. My pa
 
 But before I jump to describing my works, I want to mention one more example of sonification project: a project of Gil Weinberg called \emph{BrainWaves}. It is based on interactive auditory research of electrical stimuli applied to \emph{in vitro} neuron cultures. I picked this work for the inherent collision of scientific and artistic approach.
 
-To briefly describe the project, \emph{BrainWaves} is \emph{``sonification installation that allows a group of players to interact with an auditory display of neural activity. The system is designed to represent electrical spike propagation in a neuron culture through sound propagation in space. Participants can simulate neural spikes by using a set of specially designed controllers, experimenting and sonically investigating the electrical activity of the brain.''}~\cite[p.~9]{Weinberg2006}. The particular part which caught my interest is the desire to experiment with the subject of sonification interactively. The classic idea of stream of data is missing---instead of discrete information there is a system, which needs to be sonified. As a comparison, one can imagine hitting an oil barrel in a goal of exploring its acoustic properties---physical model, where system becomes the subject.
+To briefly describe the project, \emph{BrainWaves} is \emph{``sonification installation that allows a group of players to interact with an auditory display of neural activity. The system is designed to represent electrical spike propagation in a neuron culture through sound propagation in space. Participants can simulate neural spikes by using a set of specially designed controllers, experimenting and sonically investigating the electrical activity of the brain''}~\cite[p.~9]{Weinberg2006}. The particular part which caught my interest is the desire to experiment with the subject of sonification interactively. The classic idea of stream of data is missing---instead of discrete information there is a system, which needs to be sonified. As a comparison, one can imagine hitting an oil barrel in a goal of exploring its acoustic properties---physical model, where system becomes the subject.
 
-Since the main subject of the auditory display is propagation pattern simulation, the authors have decided to use spatialization as a key element of representation. As they argue against visual display, \emph{``sonification can be more effective than visualization in such a spatial application because the human auditory system is able to perceive synchronous spatial stimuli from every point within a space, while visual perception is limited to physical range of sight.''}~\cite[p.~9]{Weinberg2006}. For the purpose, 8 speakers in space are used to provide sufficient clues for the exact propagation pattern.
+Since the main subject of the auditory display is propagation pattern simulation, the authors have decided to use spatialization as a key element of representation. As they argue against visual display, \emph{``sonification can be more effective than visualization in such a spatial application because the human auditory system is able to perceive synchronous spatial stimuli from every point within a space, while visual perception is limited to physical range of sight''}~\cite[p.~9]{Weinberg2006}. For the purpose, 8 speakers in space are used to provide sufficient clues for the exact propagation pattern.
 
 For the interactive standpoint, custom made drum trigger instruments were created using piezo elements to represent electrical spikes in the system. Performers are asked to hit these in specific way---after first propagation ends, performer placed closest to its ending is bound to start another one, by hitting his own instrument. At this point one could see an interesting connection between \emph{sonification} and \emph{gamification} as a very close methods of bringing data streams and system under closer, possibly more understandable, examination.
 
