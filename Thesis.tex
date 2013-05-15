@@ -1,12 +1,19 @@
+%%%% Streams & Currents by Jonas Gruska
+%%%% (CC) May 2013
+%%%% Made for LaTeX
+
 \documentclass[12pt,a4paper,oneside]{report} 
+
+%%%% E-reader export 
 
 %\documentclass[14pt,a5paper,oneside]{memoir}
 %\setlrmarginsandblock{1cm}{1cm}{*}
 %\setulmarginsandblock{2cm}{2cm}{*}
 %\checkandfixthelayout
 
-\usepackage[utf8]{inputenc} 
-\usepackage[
+%%%% Includes
+\usepackage[utf8]{inputenc}				% UTF-8 support
+\usepackage[							% PDF metadata
 	pdftex,
     pdfauthor={Jonas Gruska},
 	pdftitle={Streams \& Currents},
@@ -16,8 +23,8 @@
 	pdfcreator={pdflatex}]{hyperref}
 
 
-\usepackage{xcolor}
-\definecolor{red}{HTML}{AD1737}
+\usepackage{xcolor}				
+\definecolor{red}{HTML}{AD1737}			% Title and link color
 
 \usepackage{apacite}
 \usepackage{cmap} 
@@ -25,14 +32,13 @@
 \usepackage[T1]{fontenc} 
 \usepackage[osf]{libertine} 
 \usepackage{libertineotf}
-\usepackage[scaled=0.90]{inconsolata}
+\usepackage[scaled=0.90]{inconsolata}	% Monospaced font
 \usepackage[parfill]{parskip} 
 \usepackage{listings}
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{setspace}
 \usepackage{anyfontsize}
-\usepackage[activate={true,nocompatibility},final,kerning=true,spacing=true,factor=1100]{microtype}
 \usepackage[font=small]{caption}
 
 \onehalfspacing
@@ -51,6 +57,11 @@
 	pdfpagelabels
 }
 
+\mathchardef\UrlBreakPenalty=10000
+\mathchardef\UrlBigBreakPenalty=10000
+
+%%%% Typographic fine-tuning
+\usepackage[activate={true,nocompatibility},final,kerning=true,spacing=true,factor=1100]{microtype}
 \frenchspacing
 \raggedbottom
 \doublehyphendemerits=10000       % No consecutive line hyphens.
@@ -568,12 +579,14 @@ The shift over last 4 years has turned me from the extremely fast and dense comp
 
 \onehalfspacing
 
+\begingroup
+\raggedright					% References look better when ragged right
 \bibliographystyle{apacite} 
 \bibliography{general}
+\endgroup
 
 \appendix
 \include{include/performances}
 \include{include/links}
-
 
 \end{document} 
