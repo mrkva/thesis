@@ -6,26 +6,19 @@
 %\checkandfixthelayout
 
 \usepackage[utf8]{inputenc} 
-\usepackage[pdftex,
-            pdfauthor={Jonas Gruska},
-            pdftitle={Streams \& Currents},
-            pdfsubject={Wireless Network Sonification and other works},
-            pdfkeywords={sonification, wireless networks, soundart, installations},
-            pdfproducer={LaTeX with hyperref},
-            pdfcreator={pdflatex}]{hyperref}
+\usepackage[
+	pdftex,
+    pdfauthor={Jonas Gruska},
+	pdftitle={Streams \& Currents},
+	pdfsubject={Wireless Network Sonification and other works},
+	pdfkeywords={sonification, wireless networks, soundart, installations},
+	pdfproducer={LaTeX with hyperref},
+	pdfcreator={pdflatex}]{hyperref}
 
 
 \usepackage{xcolor}
 \definecolor{red}{HTML}{AD1737}
-\usepackage{hyperref}
-\hypersetup{
-colorlinks=true,
-linkcolor=red,
-citecolor=red,
-urlcolor=red,
-anchorcolor=red,
-filecolor=red
-}
+
 \usepackage{apacite}
 \usepackage{cmap} 
 \usepackage{url}
@@ -39,12 +32,33 @@ filecolor=red
 \usepackage{float}
 \usepackage{setspace}
 \usepackage{anyfontsize}
-
+\usepackage{microtype}
 
 \onehalfspacing
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows,fit,backgrounds}
 
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=red,
+	citecolor=red,
+	urlcolor=red,
+	anchorcolor=red,
+	filecolor=red,
+	plainpages=false,
+	pdfpagelabels
+}
+
+\frenchspacing
+\raggedbottom
+\doublehyphendemerits=10000       % No consecutive line hyphens.
+\brokenpenalty=10000              % No broken words across columns/pages.
+\widowpenalty=9999                % Almost no widows at bottom of page.
+\clubpenalty=9999                 % Almost no orphans at top of page.
+\interfootnotelinepenalty=9999
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title{
 {\fontsize{43}{30}\selectfont \color{red}\sc{Streams~\&~Currents}}\\
@@ -59,14 +73,6 @@ Institute of Sonology}
 
 \begin{document}
 
-\frenchspacing
-\raggedbottom
-\doublehyphendemerits=10000       % No consecutive line hyphens.
-\brokenpenalty=10000              % No broken words across columns/pages.
-\widowpenalty=9999                % Almost no widows at bottom of page.
-\clubpenalty=9999                 % Almost no orphans at top of page.
-\interfootnotelinepenalty=9999
-
 \maketitle
 
 \begin{abstract}
@@ -74,8 +80,8 @@ First and main topic of this thesis is a concept of sonification and its various
 Second topic is my own artistic work, which partly overlaps with sonification, but also reaches towards site-specific audio-visual installations, compositions based on a auditory illusions and the minimalistic gallery performances. 
 \end{abstract}
 \clearpage
-\setcounter{page}{3}
 
+\setcounter{page}{3}
 
 \chapter*{Acknowledgements}
 I would like to thank my parents for supporting me during my studies. I would never be able to learn what I love without them. And of course, I would like to thank my mentor Paul Berg for his patience with my chaotic behavior and the whole Institute of Sonology for helping me to become who I want to be. Lastly, I would like to thank Janka Kobolková, Marko Uzunovski, Xavier De \mbox{Wannemaeker}, Maya Verlaak, Daniel Tóth, Peter Sych, Marek Chołoniewski and all my other friends in supporting me in my work, inspiring and pushing me forward. My special thanks go to Marek Slobodník, Norman Teale and Agnes Szelang for helping me with my language.
@@ -548,7 +554,7 @@ I have actually quite enjoyed the concept of creating an installation which serv
   \centering
     \includegraphics[width=1\textwidth]{img/sitespec}
         \caption{Performance of \emph{Site Specific Resonances}}
-        \label{fig:sitespec}
+        \label{fig:sitespecimg}
 \end{figure}
 
 \chapter{Conclusion}
